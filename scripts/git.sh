@@ -10,8 +10,7 @@ chmod 777 /home/git/timestamps/gitcommit
 remote=$(cat /home/git/timestamps/gitcommit)
 slocal=$(cat /home/git/timestamps/lastcommit)
 
-if [[ $remote -gt $slocal ]]
-    then
+if [[ $remote -gt $slocal]]; then
     rsync -r /home/git/drive_3380/* /var/www/html/ && echo "FILES MOVED\n"
     rm -rf /home/git/drive_3380 && echo "GIT REPO DELETED\n"
     rm -rf /var/www/html/README.md /var/www/html/.git && echo "EXCESS FILES DELETED"
@@ -21,8 +20,7 @@ if [[ $remote -gt $slocal ]]
     rm -rf /home/git/timestamps/gitcommit
 else
     read -p "Overwrite files: " option
-    if [[ $option=="y" ]]
-        then
+    if [[ $option=="y"]]; then
         rsync -r /home/git/drive_3380/* /var/www/html/ && echo "FILES MOVED\n"
         rm -rf /home/git/drive_3380 && echo "GIT REPO DELETED\n"
         rm -rf /var/www/html/README.md /var/www/html/.git && echo "EXCESS FILES DELETED"
