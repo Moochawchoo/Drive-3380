@@ -7,7 +7,10 @@ grep -Eo "1[0-9]{9}" /home/git/drive_3380/.git/logs/refs/heads/master > /home/gi
 
 chmod 777 /home/git/timestamps/gitcommit
 
-if [ $(cat /home/git/timestamps/gitcommit) -gt $(cat /home/git/timestamps/lastcommit) ]; then
+remote=$(cat /home/git/timestamps/gitcommit)
+slocal=$(cat /home/git/timestamps/lastcommit)
+
+if [ $remote -gt $slocal ]; then
     rsync -r /home/git/drive_3380/* /var/www/html/ && echo "FILES MOVED\n"
     rm -rf /home/git/drive_3380 && echo "GIT REPO DELETED\n"
     rm -rf /var/www/html/README.md /var/www/html/.git && echo "EXCESS FILES DELETED"
