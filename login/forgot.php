@@ -1,6 +1,6 @@
 <?php 
 /* Reset your password form, sends reset.php password link */
-require 'db';
+require 'db.php';
 session_start();
 
 // Check if form submitted with method="post"
@@ -12,7 +12,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     if ( $result->num_rows == 0 ) // User doesn't exist
     { 
         $_SESSION['message'] = "User with that email doesn't exist!";
-        header("location: error");
+        header("location: error.php");
     }
     else { // User exists (num_rows != 0)
 
@@ -28,7 +28,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         // Send registration confirmation link (reset.php)
         $to      = $email;
-        $subject = 'Password Reset Link';
+        $subject = 'Password Reset Link ( clevertechie.com )';
         $message_body = '
         Hello '.$first_name.',
 
@@ -36,11 +36,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         Please click this link to reset your password:
 
-        http://server.1337ersprime.com/login/reset?email='.$email.'&hash='.$hash;  
+        http://localhost/login-system/reset.php?email='.$email.'&hash='.$hash;  
 
         mail($to, $subject, $message_body);
 
-        header("location: success");
+        header("location: success.php");
   }
 }
 ?>
@@ -57,7 +57,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
     <h1>Reset Your Password</h1>
 
-    <form action="forgot" method="post">
+    <form action="forgot.php" method="post">
      <div class="field-wrap">
       <label>
         Email Address<span class="req">*</span>

@@ -22,7 +22,7 @@ $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mys
 if ( $result->num_rows > 0 ) {
     
     $_SESSION['message'] = 'User with this email already exists!';
-    header("location: error");
+    header("location: error.php");
     
 }
 else { // Email doesn't already exist in a database, proceed...
@@ -43,7 +43,7 @@ else { // Email doesn't already exist in a database, proceed...
 
         // Send registration confirmation link (verify.php)
         $to      = $email;
-        $subject = 'Account Verification';
+        $subject = 'Account Verification ( clevertechie.com )';
         $message_body = '
         Hello '.$first_name.',
 
@@ -51,17 +51,17 @@ else { // Email doesn't already exist in a database, proceed...
 
         Please click this link to activate your account:
 
-        http://server.1337ersprime.com/login/verify?email='.$email.'&hash='.$hash;  
+        http://localhost/login-system/verify.php?email='.$email.'&hash='.$hash;  
 
         mail( $to, $subject, $message_body );
 
-        header("location: profile"); 
+        header("location: profile.php"); 
 
     }
 
     else {
         $_SESSION['message'] = 'Registration failed!';
-        header("location: error");
+        header("location: error.php");
     }
 
 }

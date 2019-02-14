@@ -1,6 +1,6 @@
 <?php
 /* Password reset process, updates database with new user password */
-require 'db';
+require 'db.php';
 session_start();
 
 // Make sure the form is being submitted with method="post"
@@ -20,14 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ( $mysqli->query($sql) ) {
 
         $_SESSION['message'] = "Your password has been reset successfully!";
-        header("location: success");    
+        header("location: success.php");    
 
         }
 
     }
     else {
         $_SESSION['message'] = "Two passwords you entered don't match, try again!";
-        header("location: error");    
+        header("location: error.php");    
     }
 
 }

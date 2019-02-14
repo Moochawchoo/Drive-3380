@@ -1,6 +1,6 @@
 <?php 
 /* Main page with two forms: sign up and log in */
-require 'db';
+require 'db.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -15,13 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if (isset($_POST['login'])) { //user logging in
 
-        require 'login';
+        require 'login.php';
         
     }
     
     elseif (isset($_POST['register'])) { //user registering
         
-        require 'register';
+        require 'register.php';
         
     }
 }
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
          <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="index" method="post" autocomplete="off">
+          <form action="index.php" method="post" autocomplete="off">
           
             <div class="field-wrap">
             <label>
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             <input type="password" required autocomplete="off" name="password"/>
           </div>
           
-          <p class="forgot"><a href="forgot">Forgot Password?</a></p>
+          <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
           
           <button class="button button-block" name="login" />Log In</button>
           
@@ -64,9 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
           
         <div id="signup">   
-          <h1>Sign Up</h1>
+          <h1>Sign Up for Free</h1>
           
-          <form action="index" method="post" autocomplete="off">
+          <form action="index.php" method="post" autocomplete="off">
           
           <div class="top-row">
             <div class="field-wrap">

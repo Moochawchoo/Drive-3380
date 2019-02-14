@@ -3,7 +3,7 @@
 //connection variables
 $host = 'localhost';
 $user = 'drivedb';
-$password = 'whatpassword';
+$password = 'mypass123';
 
 //create mysql connection
 $mysqli = new mysqli($host,$user,$password);
@@ -19,16 +19,17 @@ if ( !$mysqli->query('CREATE DATABASE accounts') ) {
 
 //create users table with all the fields
 $mysqli->query('
-CREATE TABLE 'accounts'.'users'(
-    'id' INT NOT NULL AUTO_INCREMENT,
-    'first_name' VARCHAR(50) NOT NULL,
-    'last_name' VARCHAR(50) NOT NULL,
-    'email' VARCHAR(100) NOT NULL,
-    'password' VARCHAR(100) NOT NULL,
-    'hash' VARCHAR(32) NOT NULL,
-    'active' BOOL NOT NULL DEFAULT 0,
-    'type' VARCHAR(32) NOT NULL,
-    PRIMARY KEY('id')
+CREATE TABLE `accounts`.`users` 
+(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `first_name` VARCHAR(50) NOT NULL,
+    `last_name` VARCHAR(50) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
+    `hash` VARCHAR(32) NOT NULL,
+    `active` BOOL NOT NULL DEFAULT 0,
+    `type` VARCHAR(32) NOT NULL,
+PRIMARY KEY (`id`) 
 );') or die($mysqli->error);
 
 ?>

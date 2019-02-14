@@ -5,7 +5,7 @@ session_start();
 // Check if user is logged in using the session variable
 if ( $_SESSION['logged_in'] != 1 ) {
   $_SESSION['message'] = "You must log in before viewing your profile page!";
-  header("location: error");    
+  header("location: error.php");    
 }
 else {
     // Makes it easier to read
@@ -59,7 +59,7 @@ else {
           <h2><?php echo $first_name.' '.$last_name; ?></h2>
           <p><?= $email ?></p>
           
-          <a href="logout"><button class="button button-block" name="logout"/>Log Out</button></a>
+          <a href="logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
 
     </div>
     
