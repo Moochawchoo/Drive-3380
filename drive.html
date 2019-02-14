@@ -3,9 +3,9 @@
     <head>
       <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <style>
-            #map
-            {
-                height: 100%;
+            #map{
+                top: 5%;
+                height: 95%;
             }
         html, body
         {
@@ -14,26 +14,26 @@
             margin: 0;
             padding: 0;
         }
-        #header
-        {
+        #header{            
             position: absolute;
         }
         #wrapper
         {
             left: 0px;
-            top: 20px;
-            bottom: 20px;
+            top: 5px;
+            bottom:15px;
             right: 0;
             position: absolute;
         }
-        #content
-        {
-            top: 1px;
+        #content {
+            top: 20px;
             bottom: 0px;
             overflow: auto;
             position: absolute;
             left: 0;
             right: 0;
+            border-radius: 5px;
+
         }
         #footer
         {
@@ -43,7 +43,32 @@
             position: absolute;
             width:100%;
             text-align: center;
+            font-size: 11px;
         }
+        .NavBar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .NavBar a {
+            font-family: Lucida, sans-serif;
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .Navbtn {
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+
         </style>
 
         <script src ="js/backendMap.js"></script>
@@ -51,12 +76,24 @@
     async defer></script>
     </head>
     <body>
-        <div id="header"><header style="color:#b3b3b3">Click <a href="login">here</a> for the login page.</header></div>
-        <div id="wrapper">
-            <div id="content">
-                <div id="map"></div>
+        <div id="header"><header style="color:#b3b3b3 "></header></div>
+            <div id="wrapper">
+
+                <div id="NavBar">
+                    <button class="Navbtn">Logo</button>
+                    <button class="Navbtn">Find a Ride</button>
+                    <button class="Navbtn">Drive?</button>
+                    <button class="Navbtn"><button class="Navbtn">Login</button></a>
+                    <button class="Navbtn">owo</button>         
+
+                </div>            
+                
+
+                <div id="content">
+                    <div id="map"></div>
                 </div>
-        </div>
-        <div id="footer"><header style="color:#b3b3b3">Copyright (c) 2019 This is painful.</header></div>
+
+            </div>
+        <div id="footer"><header style="color:#b3b3b3">Copyright (c) 2019 This is painful kill me uwu.</header></div>
     </body>
 </html>
