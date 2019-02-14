@@ -4,12 +4,12 @@
       <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <style>
             #map{
-                top: 5%;
-                height: 95%;
+                top: 0%;
+                height: 100%;
             }
         html, body
         {
-            background-color: #282923;
+            background-color: #606060;
             font-family: 'Roboto';font-size: 22px;
             margin: 0;
             padding: 0;
@@ -20,13 +20,13 @@
         #wrapper
         {
             left: 0px;
-            top: 5px;
+            top: 0px;
             bottom:15px;
             right: 0;
             position: absolute;
         }
         #content {
-            top: 20px;
+            top: 50px;
             bottom: 0px;
             overflow: auto;
             position: absolute;
@@ -54,9 +54,18 @@
             float: left;
             color: #f2f2f2;
             text-align: center;
-            padding: 14px 16px;
+            padding: 10px 16px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 15px;
+            font-weight: 900;
+        }
+        .NavBar a:hover {
+            background-color: #E2B448;
+            color: black;
+        }
+        .NavBar a.active {
+            background-color: #E2B448;
+            color: white;
         }
         .Navbtn {
             border: none;
@@ -79,12 +88,13 @@
         <div id="header"><header style="color:#b3b3b3 "></header></div>
             <div id="wrapper">
 
-                <div id="NavBar">
-                    <button class="Navbtn">Logo</button>
-                    <button class="Navbtn">Find a Ride</button>
-                    <button class="Navbtn">Drive?</button>
-                    <button class="Navbtn"><button class="Navbtn">Login</button></a>
-                    <button class="Navbtn">owo</button>         
+                <div class="NavBar">
+                    <a href="login/index">Logo</button>
+                    <a href="login/index">Find a Ride</button>
+                    <a href="login/index">Drive?</button>
+                    <a href="login/index">owo</button>       
+                    <a href="login/index"style="float: right;">Login</button></a>
+                      
 
                 </div>            
                 
