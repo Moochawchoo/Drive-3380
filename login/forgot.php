@@ -36,7 +36,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         Please click this link to reset your password:
 
-        http://localhost/login-system/reset.php?email='.$email.'&hash='.$hash;  
+        https://server.1337ersprime.com/login/reset.php?email='.$email.'&hash='.$hash;  
 
         mail($to, $subject, $message_body);
 
@@ -68,7 +68,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     </form>
   </div>
           
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
 </body>
 
