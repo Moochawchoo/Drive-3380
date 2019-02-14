@@ -3,7 +3,7 @@
 //connection variables
 $host = 'localhost';
 $user = 'drivedb';
-$password = 'mypass123';
+$password = 'whatpassword';
 
 //create mysql connection
 $mysqli = new mysqli($host,$user,$password);
