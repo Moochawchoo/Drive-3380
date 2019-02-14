@@ -1,4 +1,4 @@
-CREATE DATABASE accountsTest;
+CREATE DATABASE accounts;
 CREATE TABLE 'accounts'.'users'(
     'id' INT NOT NULL AUTO_INCREMENT,
     'first_name' VARCHAR(50) NOT NULL,
