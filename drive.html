@@ -3,30 +3,34 @@
     <head>
         <style>
             #map{
-                height: 100%;
+                top: 5%;
+                height: 95%;
             }
         html, body{
             background-color: #2c2f33;
             margin: 0;
             padding: 0;
         }
-        #header{
+        #header{            
+
             position: absolute;
         }
         #wrapper{
             left: 0px;
-            top: 20px;
-            bottom: 20px;
+            top: 5px;
+            bottom:15px;
             right: 0;
             position: absolute;
         }
         #content {
-            top: 1px;
+            top: 20px;
             bottom: 0px;
             overflow: auto;
             position: absolute;
             left: 0;
             right: 0;
+            border-radius: 5px;
+
         }
         #footer{
             bottom: 0;
@@ -35,7 +39,18 @@
             position: absolute;
             width:100%;
             text-align: center;
+            font-size: 11px;
         }
+        #NavBar{
+            background-color:#515b68;
+            top: 0px;
+            bottom: 93.1%;
+            left: 0px;
+            right: 0px;
+            border-radius: 5px;
+            position: absolute;
+        }
+
         </style>
         
         <script src ="js/backendMap.js"></script>
@@ -43,12 +58,13 @@
     async defer></script>
     </head>
     <body>
-        <div id="header"><header style="color:#b3b3b3">Click <a href="login">here</a> for the login page.</header></div>
-        <div id="wrapper">
-            <div id="content">
-                <div id="map"></div>
-                </div>
-        </div>
-        <div id="footer"><header style="color:#b3b3b3">Copyright (c) 2019 This is painful.</header></div>
+        <div id="header"><header style="color:#b3b3b3 "></header></div>
+            <div id="wrapper">
+                <div id="NavBar">Click <a href="login">here</a> for the login page.</div>            
+                    <div id="content">
+                        <div id="map"></div>
+                    </div>
+            </div>
+        <div id="footer"><header style="color:#b3b3b3">Copyright (c) 2019 This is painful kill me.</header></div>
     </body>
 </html>
