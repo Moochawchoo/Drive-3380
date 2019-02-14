@@ -41,15 +41,29 @@
             text-align: center;
             font-size: 11px;
         }
-        #NavBar{
-            background-color:#515b68;
-            top: 0px;
-            bottom: 93.1%;
-            left: 0px;
-            right: 0px;
-            border-radius: 5px;
-            position: absolute;
+        .NavBar {
+            background-color: #333;
+            overflow: hidden;
         }
+        .NavBar a {
+            font-family: Lucida, sans-serif;
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .Navbtn {
+            border: none;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
 
         </style>
         
@@ -60,11 +74,22 @@
     <body>
         <div id="header"><header style="color:#b3b3b3 "></header></div>
             <div id="wrapper">
-                <div id="NavBar">Click <a href="login">here</a> for the login page.</div>            
-                    <div id="content">
-                        <div id="map"></div>
-                    </div>
+
+                <div id="NavBar">
+                    <button class="Navbtn">Logo</button>
+                    <button class="Navbtn">Find a Ride</button>
+                    <button class="Navbtn">Drive?</button>
+                    <button class="Navbtn"><button class="Navbtn">Login</button></a>
+                    <button class="Navbtn">owo</button>         
+
+                </div>            
+                
+
+                <div id="content">
+                    <div id="map"></div>
+                </div>
+
             </div>
-        <div id="footer"><header style="color:#b3b3b3">Copyright (c) 2019 This is painful kill me.</header></div>
+        <div id="footer"><header style="color:#b3b3b3">Copyright (c) 2019 This is painful kill me uwu.</header></div>
     </body>
 </html>
