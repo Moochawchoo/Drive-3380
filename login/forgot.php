@@ -42,7 +42,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         mail($to, $subject, $message_body); */
 
-        header("location: reset_password.php");
+        header("location: reset.php");
   }
 }
 ?>
