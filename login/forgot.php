@@ -22,8 +22,10 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         $hash = $user['hash'];
         $first_name = $user['first_name'];
 
+
+
         // Session message to display on success.php
-        $_SESSION['message'] = "<p>Please check your email <span>$email</span>"
+        /* $_SESSION['message'] = "<p>Please check your email <span>$email</span>"
         . " for a confirmation link to complete your password reset!</p>";
 
         // Send registration confirmation link (reset.php)
@@ -38,9 +40,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         http://localhost/login-system/reset.php?email='.$email.'&hash='.$hash;  
 
-        mail($to, $subject, $message_body);
+        mail($to, $subject, $message_body); */
 
-        header("location: success.php");
+        header("location: reset_password.php");
   }
 }
 ?>
