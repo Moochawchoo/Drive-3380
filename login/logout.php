@@ -1,25 +1,14 @@
 <?php
-/* Log out process, unsets and destroys session variables */
+// Initialize the session
 session_start();
-session_unset();
-session_destroy(); 
+ 
+// Unset all of the session variables
+$_SESSION = array();
+ 
+// Destroy the session.
+session_destroy();
+ 
+// Redirect to login page
+header("location: login");
+exit;
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Error</title>
-  <?php include 'css/css.html'; ?>
-</head>
-
-<body>
-    <div class="form">
-          <h1>Thanks for stopping by</h1>
-              
-          <p><?= 'You have been logged out!'; ?></p>
-          
-          <a href="index.php"><button class="button button-block"/>Home</button></a>
-
-    </div>
-</body>
-</html>
