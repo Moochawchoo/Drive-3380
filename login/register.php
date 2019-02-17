@@ -55,7 +55,7 @@ else { // Email doesn't already exist in a database, proceed...
 
         mail( $to, $subject, $message_body ); */ //remove email portion. SMTP out only mail does not work
 
-        header("location: profile.php"); 
+        header("location: verify.php"); 
 
     }
 
