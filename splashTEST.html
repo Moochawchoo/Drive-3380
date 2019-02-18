@@ -4,37 +4,28 @@
     <head>
       <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <style>
-          #map
-          {
-              top: 0%;
-              height: 100%;
-          }
-          .mapBox
-          {
-            display: flex;
-            justify-content: center;
-            align-self: center;
-            position: relative;
-            overflow: auto;
-            left: 47%;
-            background-color: #E2B448;
-            border-radius: 10px;
-            color: white;
-            width: 100px;
-            height: 100px;
-          }
         html, body
         {
             background-color: #606060;
             font-family: 'Roboto';
             font-size: 22px;
+            margin: 0;
+            padding: 0;
+        }
+        #map
+        {
+          height: 300px;
+          width: 300px;
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          outline-width: 20px;
+          outline-color: black;
         }
         </style>
-        <div class ="mapBox">
-          <script src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
-          <script src ="js/backendMap.js">
-          initMap();
-          </script>
-        </div>
+        <script src ="js/backendMap.js"></script>
+   		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"
+    async defer></script>
     </head>
+                    <div id="map"></div>
 </html>
