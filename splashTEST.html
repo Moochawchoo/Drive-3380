@@ -16,7 +16,7 @@
             align-self: center;
             position: relative;
             overflow: auto;
-            left: 50%;
+            left: 47%;
             background-color: #E2B448;
             border-radius: 10px;
             color: white;
@@ -31,8 +31,10 @@
         }
         </style>
         <div class ="mapBox">
-          <script src ="js/backendMap.js"></script>
           <script src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
+          <script src ="js/backendMap.js">
+          initMap();
+          </script>
         </div>
     </head>
 </html>
