@@ -19,16 +19,18 @@
             position: absolute;
           }
           /*canvas for map*/
-          #content
+          #map
           {
-              top:;
-              bottom:;
-              overflow: auto;
-              position: absolute;
-              left: 0;
-              right: 0;
+            height: 300px;
+            width: 300px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            outline-width: 20px;
+            outline-color: black;
+            position: relative;
+            left: 60%;
           }
-
           /*navbar backgroud*/
           .topnav
           {
@@ -78,6 +80,16 @@
         <h1>
             <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
         </h1>
-
+        <script>
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"),
+          {
+            center: {lat: 30.4133, lng: -91.1800},
+            zoom: 14
+          });
+        }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
+        <div id="map"></div>
     </head>
 </html>
