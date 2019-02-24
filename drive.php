@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
@@ -93,9 +97,21 @@
             <div id="wrapper">
                 <div class="topnav">
                     <a href="splash" style="padding-right:8px;padding-left:8px;padding-top:2px;padding-bottom:0px"><img src="assets/driveLOGOalt.svg" alt="Drive" style="padding-top:0px;padding-bottom:0px;width:32px;height:32px;"></a>
-                    <a href="login/register">Find a Ride</button>
-                    <a href="login/register">Drive?</button>
-                    <a href="login/register"style="float: right;">Login</button></a>
+                    <?php if(!isset($_SESSION["loggedin"])||$_SESSION["loggedin"]!==true): ?>
+                        <a href="login/register">Find a Ride</button>
+                    <?php else: ?>
+                        <a href="ride">Find a Ride</button>
+                    <?php endif; ?>
+                    <?php if(!isset($_SESSION["loggedin"])||$_SESSION["loggedin"]!==true): ?>
+                        <a href="login/register">Drive?</button>
+                    <?php else: ?>
+                        <a href="driver">Drive?</button>
+                    <?php endif; ?>
+                    <?php if(!isset($_SESSION["loggedin"])||$_SESSION["loggedin"]!==true): ?>
+                        <a href="login/register"style="float: right;">Login</button></a>
+                    <?php else: ?>
+                        <a href="login/profile"style="float: right;">Profile</button></a>
+                    <?php endif; ?>
                 </div>
                 <div id="content">
                     <div id="map"></div>
