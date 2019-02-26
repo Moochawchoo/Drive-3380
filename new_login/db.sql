@@ -7,5 +7,5 @@ CREATE TABLE 'accounts'.'users'(
     'password' VARCHAR(100) NOT NULL,
     'hash' VARCHAR(32) NOT NULL,
     'type' VARCHAR(5) NOT NULL,
-    PRIMARY KEY('is')
+    PRIMARY KEY('id')
 );

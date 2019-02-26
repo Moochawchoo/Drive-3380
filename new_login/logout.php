@@ -3,7 +3,7 @@
 session_start();
 
 $_SESSION=array();
-session_destrouy();
+session_destroy();
 
 header("location: ../../splash");
 exit;
