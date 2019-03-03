@@ -1,8 +1,26 @@
 <?php
-$title = 'Home';
+$title = 'Drive';
 
 include "login/misc/pagehead.php";
 ?>
+    <style>
+        #wrapper
+          {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            left: 60%;
+            border-radius: 10px;
+            overflow: hidden;
+            outline-width: 20px;
+            outline-color: black;
+          }
+          #map
+          {
+            height: inherit;
+            width: inherit;
+          }
+          </style>
 </head>
 <body>
 
@@ -39,5 +57,26 @@ if ($auth->isLoggedIn()) {
 ?>
         </div><div class="col-lg-2"></div>
     </div>
+
+
+    <h1>
+            <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
+        </h1>
+        <div id="wrapper">
+          <div id="map">
+            <script>
+            function initMap() {
+              map = new google.maps.Map(document.getElementById("map"),
+              {
+                center: {lat: 30.4133, lng: -91.1800},
+                zoom: 14
+              });
+            }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
+          </div>
+        </div>
+
+
 </body>
 </html>
