@@ -73,7 +73,7 @@ if ($auth->isLoggedIn()) {
               });
             }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=KEY_REDACTED&callback=initMap"async defer></script>
           </div>
         </div>
 
