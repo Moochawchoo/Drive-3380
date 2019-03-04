@@ -123,4 +123,28 @@ class AuthorizationHandler extends DbConn
     {
         return $this->checkSessionKey("username") != false && $this->sessionValid();
     }
+
+    //ADDED CHECKS
+
+    /**
+     * Checks user for Rider role
+     * Options given to Admin and SuperAdmin for testing/moderation purposes
+     * 
+     * @return boolean
+     */
+    public function isRider(): bool
+    {
+        return ($this->checkRole($this->checkSessionKey("uid"), "Rider") != false || $this->isAdmin() || $this->isSuperAdmin()) && $this->sessionValid();
+    }
+
+    /**
+     * Checks user for Driver role
+     * Options given to Admin and SuperAdmin for testing/moderation purposes
+     * 
+     * @return boolean
+     */
+    public function isDriver(): bool
+    {
+        return ($this->checkRole($this->checkSessionKey("uid"), "Driver") != false || $this->isAdmin() || $this->isSuperAdmin()) && $this->sessionValid();
+    }
 }

@@ -26,7 +26,6 @@ include "login/misc/pagehead.php";
 	    left: 0;
 	    position: absolute;
         width: 100%;
-        height: 15px;
 	    text-align: center;
 	    font-size: 11px;
     }

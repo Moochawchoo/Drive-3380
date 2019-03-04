@@ -79,7 +79,22 @@ if ($auth->isLoggedIn()) {
                 <li><a href="<?php echo $this->base_url; ?>/user/profileedit.php">Edit Profile</a></li>
                 <li><a href="<?php echo $this->base_url; ?>/user/accountedit.php">Account Settings</a></li>
                 <li role="separator" class="divider"></li>
-
+                <!-- Rider Options -->
+                <?php if ($auth->isRider()): ?>
+                <li><a href="<?php echo $this->base_url; ?>/rider/getride.php">Schedule A Ride</a></li>
+                <li><a href="<?php echo $this->base_url; ?>/rider/rates.php">Check Rates</a></li>
+                <li role="separator" class="divider"></li>
+                <?php endif; ?>
+                <!-- Driver Options -->
+                <!-- Rider Register to Driver Option -->
+                <?php if ($auth->isRider()): ?>
+                <li><a href="<?php echo $this->base_url; ?>/driver/driver.php">Become A Driver</a></li>
+                <?php endif; ?>
+                <!-- Main Driver Options -->
+                <?php if ($auth->isDriver()): ?>
+                <li><a href="<?php echo $this->base_url; ?>/driver/pickup.php">Pick Up A Rider</a></li>
+                <li role="separator" class="divider"></li>
+                <?php endif; ?>
                 <!-- Superadmin Controls -->
                 <?php if ($auth->isSuperAdmin()): ?>
                   <li><a href="<?php echo $this->base_url; ?>/admin/config.php">Edit Site Config</a></li>
