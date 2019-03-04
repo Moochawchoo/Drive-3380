@@ -56,6 +56,7 @@ if ($auth->isLoggedIn()) {
 
 ?>
         </div><div class="col-lg-2"></div>
+        <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
 
 
