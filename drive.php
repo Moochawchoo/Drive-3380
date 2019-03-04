@@ -33,6 +33,9 @@ include "login/misc/pagehead.php";
 	    text-align: center;
 	    font-size: 11px;
     }
+    html, body{
+        font-family: 'Roboto';
+    }
 </style>
     <?php require "login/misc/pullnav.php"; ?>
 </head>

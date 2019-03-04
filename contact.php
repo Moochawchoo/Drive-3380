@@ -1,6 +1,5 @@
 <?php
 $title="Contact";
-$userrole="Public Page";
 include "login/misc/pagehead.php";
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -13,6 +12,9 @@ include "login/misc/pagehead.php";
 	    width: 100%;
 	    text-align: center;
 	    font-size: 11px;
+    }
+    html, body{
+        font-family: 'Roboto';
     }
 </style>
     <?php require "login/misc/pullnav.php"; ?>

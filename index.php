@@ -10,7 +10,7 @@ include "login/misc/pagehead.php";
         height: 300px;
         width: 300px;
         position: relative;
-        left: 60%;
+        left: 40.5%;
         border-radius: 10px;
         overflow: hidden;
         outline-width: 20px;
@@ -19,6 +19,19 @@ include "login/misc/pagehead.php";
     #map{
         height: inherit;
         width: inherit;
+    }
+    #footer{
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    position: absolute;
+        width: 100%;
+        height: 15px;
+	    text-align: center;
+	    font-size: 11px;
+    }
+    html, body{
+        font-family: 'Roboto';
     }
 </style>
 </head>
@@ -58,8 +71,6 @@ if ($auth->isLoggedIn()) {
         </div><div class="col-lg-2"></div>
         <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
-
-
 <h1>
     <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
 </h1>

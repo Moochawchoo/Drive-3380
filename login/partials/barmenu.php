@@ -4,6 +4,6 @@
 $barmenu = array(
     "Home" => "index.php",
     "Drive" => "drive.php",
-    "About Us" => "page_3.php",
+    "About Us" => "about.php",
     "Contact Us" => "contact.php"
 );
