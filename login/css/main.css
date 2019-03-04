@@ -179,6 +179,7 @@ tr:not(.checkedrow):hover {
 }
 .mainlogo {
     margin-top: -6px;
+    margin-left: 10px;
 }
 .navbar-toggle {
     width: 40px;

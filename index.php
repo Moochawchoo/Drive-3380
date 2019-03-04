@@ -3,24 +3,24 @@ $title = 'Drive';
 
 include "login/misc/pagehead.php";
 ?>
-    <style>
-        #wrapper
-          {
-            height: 300px;
-            width: 300px;
-            position: relative;
-            left: 60%;
-            border-radius: 10px;
-            overflow: hidden;
-            outline-width: 20px;
-            outline-color: black;
-          }
-          #map
-          {
-            height: inherit;
-            width: inherit;
-          }
-          </style>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<style>
+    #wrapper{
+        height: 300px;
+        width: 300px;
+        position: relative;
+        left: 60%;
+        border-radius: 10px;
+        overflow: hidden;
+        outline-width: 20px;
+        outline-color: black;
+    }
+    #map{
+        height: inherit;
+        width: inherit;
+    }
+</style>
 </head>
 <body>
 
@@ -59,24 +59,23 @@ if ($auth->isLoggedIn()) {
     </div>
 
 
-    <h1>
-            <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
-        </h1>
-        <div id="wrapper">
-          <div id="map">
-            <script>
+<h1>
+    <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
+</h1>
+<div id="wrapper">
+    <div id="map">
+        <script>
             function initMap() {
-              map = new google.maps.Map(document.getElementById("map"),
-              {
-                center: {lat: 30.4133, lng: -91.1800},
-                zoom: 14
-              });
-            }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=KEY_REDACTED&callback=initMap"async defer></script>
-          </div>
-        </div>
-
+                map = new google.maps.Map(document.getElementById("map"),
+                    {
+                        center: {lat: 30.4133, lng: -91.1800},
+                        zoom: 14
+                    });
+                }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=KEY_REDACTED&callback=initMap"async defer></script>
+    </div>
+</div>
 
 </body>
 </html>
