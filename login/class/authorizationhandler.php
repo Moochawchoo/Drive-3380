@@ -77,6 +77,8 @@ class AuthorizationHandler extends DbConn
             return $this->isAdmin();
           case 'Superadmin':
             return $this->isSuperAdmin();
+          case 'DriverRider':
+            return $this->isRider() || $this->isDriver();
           default:
             return ($this->checkRole($this->checkSessionKey("uid"), $roleName) != false || $this->isAdmin()) && $this->sessionValid();
         }

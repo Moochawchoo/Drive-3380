@@ -1,6 +1,6 @@
 <?php
 $title="Drive";
-$userrole="Rider";
+$userrole="DriverRider";
 include "login/misc/pagehead.php";
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
