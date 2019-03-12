@@ -67,8 +67,8 @@ if ($auth->isLoggedIn()) {
         echo '<p><b><em>Edit Site Config</em></b> - Superadmin edit site configuration in one page</p>';
     }
 } else {
-    echo '<div class="jumbotron text-center"><h1 class="display-1">Homepage</h1>
-    <small>Welcome to Drive. You are currently signed out.</small><br><br>
+    echo '<div class="jumbotron text-center"><h1 class="display-1">Welcome to Drive</h1>
+    <small>You are currently signed out.</small><br><br>
     <p>You can sign in or create a new account by clicking "Sign In" in the top right corner!</p>';
 }
 
