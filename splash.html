@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
-    <head>
       <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <style>
           /*Reminder to use alternate color scheme logo with overflow float*/
@@ -12,10 +11,16 @@
           /*encompases enitre page*/
           #wrapper
           {
+          	height:60%;
+          	width:80%;
+          	position: center;
+          }
+          #mwrap
+          {
             height: 300px;
             width: 300px;
             position: relative;
-            left: 60%;
+            float: left;
             border-radius: 10px;
             overflow: hidden;
             outline-width: 20px;
@@ -66,28 +71,32 @@
             font-size: 22px;
         }
         </style>
-        <div class="topnav">
-          <a href="splash" style="padding-right:8px;padding-left:8px;padding-top:2px;padding-bottom:0px"><img src="assets/driveLOGOalt.svg" alt="Drive" style="padding-top:0px;padding-bottom:0px;width:32px;height:32px;"></a>
-          <a href="drive">Drive</a>
-          <a href="login/register" style="float: right;">Login</a>
-          <a href="about">About us</a>
-        </div>
+        <head>
+        	<div class="topnav">
+          		<a href="splash" style="padding-right:8px;padding-left:8px;padding-top:2px;padding-bottom:0px"><img src="assets/driveLOGOalt.svg" alt="Drive" style="padding-top:0px;padding-bottom:0px;width:32px;height:32px;"></a>
+         		<a href="drive">Drive</a>
+          		<a href="login/register" style="float: right;">Login</a>
+          		<a href="about">About us</a>
+        		</div>
+    	</head>
         <h1>
-            <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
+            <p style="color:#E1E1E1; text-align: center; padding-top: 1.5%; ">Welcome to Drive</p>
         </h1>
         <div id="wrapper">
-          <div id="map">
-            <script>
-            function initMap() {
-              map = new google.maps.Map(document.getElementById("map"),
-              {
-                center: {lat: 30.4133, lng: -91.1800},
-                zoom: 14
-              });
-            }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
-          </div>
-        </div>
-    </head>
+            <p style="color:#E1E1E1; float: left;">Need a ride? Pick a point A and we'll get you to point B</p>
+	        <div id="mwrap">
+	          <div id="map">
+	            <script>
+	            function initMap() {
+	              map = new google.maps.Map(document.getElementById("map"),
+	              {
+	                center: {lat: 30.4133, lng: -91.1800},
+	                zoom: 14
+	              });
+	            }
+	            </script>
+	            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPATtzniskBsjq15BYelpSyuIAWxjvPO0&callback=initMap"async defer></script>
+	          </div>
+	        </div>
+	    </div>
 </html>
