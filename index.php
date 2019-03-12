@@ -6,7 +6,13 @@ include "login/misc/pagehead.php";
 
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <style>
-    #wrapper{
+    #wrapper
+    {
+    height:40%;
+    width:80%;
+    position: center;
+    }
+    #mwrapper{
 	height: 300px;
 	width: 300px;
 	position: relative;
@@ -74,19 +80,21 @@ if ($auth->isLoggedIn()) {
     <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
 </h1>
 <div id="wrapper">
-    <div id="map">
-        <script>
-            function initMap() {
-                map = new google.maps.Map(document.getElementById("map"),
-                    {
-                        center: {lat: 30.4133, lng: -91.1800},
-                        zoom: 14
-                    });
-                }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap"async defer></script>
+    <p style="color:#E1E1E1; float: left; text-align: center; padding-left: 15%; padding-right: 5%; font-size:;">Need a ride? Pick a point A and we'll get you to point B</p>
+    <div id="mwrap">
+        <div id="map">
+            <script>
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById("map"),
+                        {
+                            center: {lat: 30.4133, lng: -91.1800},
+                            zoom: 14
+                        });
+                    }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap"async defer></script>
+        </div>
     </div>
 </div>
-
 </body>
 </html>
