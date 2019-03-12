@@ -22,6 +22,8 @@ include "login/misc/pagehead.php";
 <body>
     <h1>
         <p style="color:#E1E1E1; text-align: center; ;">Contact Us</p>
+        <p style="color:#E1E1E1; text-align: center; ;">Email:drive@1337ersprime.com</p>
+        <p style="color:#E1E1E1; text-align: center; ;">Phone:(605) 475-6968</p>
     </h1>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
