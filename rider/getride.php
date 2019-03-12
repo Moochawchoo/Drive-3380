@@ -1,3 +1,4 @@
+
 <?php
 $title="Ride";
 $userrole="Rider";
@@ -5,6 +6,25 @@ include "../login/misc/pagehead.php";
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <style>
+    #map{
+    top: 0%;
+    height: 100%;
+    }
+    #wrapper{
+    left:0;
+    right: 0;
+    top: 52px;
+    bottom: 15px;
+    position: absolute;
+    }
+    #content{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    position: absolute;
+    }
     #footer{
 	    bottom: 0;
 	    right: 0;
@@ -21,10 +41,14 @@ include "../login/misc/pagehead.php";
     <?php require "../login/misc/pullnav.php"; ?>
 </head>
 <body>
-    <h1>
-        <p style="color:#E1E1E1; text-align: center; ;">Schedule A Ride</p>
-    </h1>
+    <script src="js/backendMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
+    <div class="container">
+    <div id="wrapper">
+        <div id="content">
+      <div id="map"></div>
+        </div>
+    </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
 </html>
-
