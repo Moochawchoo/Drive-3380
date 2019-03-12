@@ -68,7 +68,7 @@ if ($auth->isLoggedIn()) {
     }
 } else {
     echo '<div class="jumbotron text-center"><h1 class="display-1">Homepage</h1>
-    <small>This is your homepage. You are currently signed out.</small><br><br>
+    <small>Welcome to Drive. You are currently signed out.</small><br><br>
     <p>You can sign in or create a new account by clicking "Sign In" in the top right corner!</p>';
 }
 
@@ -76,9 +76,6 @@ if ($auth->isLoggedIn()) {
         </div><div class="col-lg-2"></div>
 	<div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
-<h1>
-    <p style="color:#E1E1E1; text-align: center; ;">Welcome to Drive</p>
-</h1>
 <div id="wrapper">
     <p style="color:#E1E1E1; float: left; text-align: center; padding-left: 15%; padding-right: 5%; font-size:;">Need a ride? Pick a point A and we'll get you to point B</p>
     <div id="mwrapper">
