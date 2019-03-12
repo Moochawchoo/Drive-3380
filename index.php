@@ -81,7 +81,7 @@ if ($auth->isLoggedIn()) {
 </h1>
 <div id="wrapper">
     <p style="color:#E1E1E1; float: left; text-align: center; padding-left: 15%; padding-right: 5%; font-size:;">Need a ride? Pick a point A and we'll get you to point B</p>
-    <div id="mwrap">
+    <div id="mwrapper">
         <div id="map">
             <script>
                 function initMap() {

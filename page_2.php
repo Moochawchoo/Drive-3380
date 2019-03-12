@@ -1,6 +1,6 @@
 <?php
 $title = "Standard User Page";
-$userrole = "Standard User"; // Allow only logged in users
+$userrole = "DriverRider"; // Allow only logged in users
 include "login/misc/pagehead.php";
 ?>
 </head>

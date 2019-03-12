@@ -136,7 +136,7 @@ class AuthorizationHandler extends DbConn
      */
     public function isRider(): bool
     {
-        return ($this->checkRole($this->checkSessionKey("uid"), "Rider") != false || $this->isAdmin() || $this->isSuperAdmin()) && $this->sessionValid();
+        return ($this->checkRole($this->checkSessionKey("uid"), "Rider") != false || $this->isAdmin()) && $this->sessionValid();
     }
 
     /**
@@ -147,6 +147,6 @@ class AuthorizationHandler extends DbConn
      */
     public function isDriver(): bool
     {
-        return ($this->checkRole($this->checkSessionKey("uid"), "Driver") != false || $this->isAdmin() || $this->isSuperAdmin()) && $this->sessionValid();
+        return ($this->checkRole($this->checkSessionKey("uid"), "Driver") != false || $this->isAdmin() || $this->isRider()) && $this->sessionValid();
     }
 }

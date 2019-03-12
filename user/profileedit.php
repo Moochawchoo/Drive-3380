@@ -1,5 +1,5 @@
 <?php
-$userrole = 'Standard User';
+$userrole = 'DriverRider';
 $title = 'Edit Profile';
 require '../login/misc/pagehead.php';
 $uid = $_SESSION['uid'];
