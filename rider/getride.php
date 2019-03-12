@@ -41,7 +41,11 @@ include "../login/misc/pagehead.php";
     <?php require "../login/misc/pullnav.php"; ?>
 </head>
 <body>
+    <div class="container">
+    <div id="wrapper">
+        <div id="content">
 	<div id="map"></div>
+      <script>
       var map, infoWindow;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -77,9 +81,6 @@ include "../login/misc/pagehead.php";
     </script>
     <script src="js/backendMap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
-    <div class="container">
-    <div id="wrapper">
-        <div id="content">
         </div>
     </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
