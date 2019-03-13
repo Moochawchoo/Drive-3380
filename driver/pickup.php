@@ -60,9 +60,7 @@ include "../login/misc/pagehead.php";
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-	    infoWindo.setPosition(pos);
             addMarker(pos,map, 'You are here driver');
-            infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
