@@ -5,6 +5,16 @@ include "../login/misc/pagehead.php";
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <style>
+    #content{
+        position: relative;
+        text-align: center;
+        float: left;
+        font-size: 18; 
+    }
+    #contentwrap{
+        position: relative;
+        float: center;
+    }
     #footer{
 	    bottom: 0;
 	    right: 0;
