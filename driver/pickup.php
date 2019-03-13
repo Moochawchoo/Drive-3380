@@ -13,7 +13,7 @@ include "../login/misc/pagehead.php";
 		left:0;
 		right:0;
 		top: 52px;
-		bottom; 15px;
+		bottom: 15px;
 		position: absolute;
 	}
     #content{
