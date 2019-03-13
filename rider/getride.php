@@ -41,6 +41,8 @@ include "../login/misc/pagehead.php";
     <?php require "../login/misc/pullnav.php"; ?>
 </head>
 <body>
+  <script src="../js/backendMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
     <div class="container">
     <div id="wrapper">
         <div id="content">
@@ -81,8 +83,7 @@ include "../login/misc/pagehead.php";
         infoWindow.open(map);
       }
     </script>
-    <script src="js/backendMap.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
+    
         </div>
     </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
