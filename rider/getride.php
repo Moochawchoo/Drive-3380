@@ -49,13 +49,11 @@ include "../login/misc/pagehead.php";
 	<div id="map"></div>
       <script>
       var map, infoWindow;
-      var beginning = {lat: 30.4133, lng: -91.1800};
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 30.4133, lng: -91.1800},
           zoom: 14
         });
-	addMarker(beginning, map, 'You are here');
         infoWindow = new google.maps.InfoWindow;
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -63,9 +61,7 @@ include "../login/misc/pagehead.php";
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
+            addMarker(pos,map, 'You are here rider');
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
