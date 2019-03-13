@@ -57,7 +57,9 @@ a {
 
 a:active,
 a:hover {
-    outline: 0
+    outline: 0;
+    background-color: #E2B448;
+    color: black
 }
 
 abbr[title] {
