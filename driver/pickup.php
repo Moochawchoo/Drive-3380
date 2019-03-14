@@ -60,7 +60,7 @@ include "../login/misc/pagehead.php";
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            addMarker(pos,map, '<?php echo .$_SESSION['username']?>'+' driver' );
+            addMarker(pos,map, '<?php echo $_SESSION['username']?>'+' driver' );
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
