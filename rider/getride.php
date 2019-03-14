@@ -61,7 +61,7 @@ include "../login/misc/pagehead.php";
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
-            addMarker(pos,map, 'You are here rider');
+            addMarker(pos,map, '<?php echo $_SESSION['username']?>' + ' rider');
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
