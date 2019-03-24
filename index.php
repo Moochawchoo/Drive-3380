@@ -7,36 +7,36 @@ include "login/misc/pagehead.php";
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <style>
     #footer{
-	bottom: 0;
-	right: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	font-size: 11px;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    position: absolute;
+	    width: 100%;
+	    text-align: center;
+	    font-size: 11px;
     }
     html, body{
-	font-family: 'Roboto';
+	    font-family: 'Roboto';
     }
     .column{
-	float: left;
-	width: 50%;
-	padding: 0px;
+	    float: left;
+	    width: 50%;
+	    padding: 0px;
     }
     #mapper{
-	height: calc(100vh - 400px);
-	width: 100%;
-	position: realtive;
-	overflow: hidden;
-	margin: 0 auto;
+	    height: calc(100vh - 400px);
+	    width: 100%;
+	    position: realtive;
+	    overflow: hidden;
+	    margin: 0 auto;
     }
     @media screen and (max-width: 600px){
-	.column{
-	    width: 100%;
-	}
+	    .column{
+	        width: 100%;
+	    }
     }
     *{
-	box-sizing: border-box;
+	    box-sizing: border-box;
     }
 </style>
 
@@ -77,22 +77,22 @@ if ($auth->isLoggedIn()) {
         </div><div class="col-lg-2"></div>
 	<div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
-    <div class="column">
+<div class="column">
 	<p style="color:#E1E1E1; margin-left: 25px">Need a ride? Pick a point A and we'll get you to point B</p>
-    </div>
-    <div class="column">
+</div>
+<div class="column">
 	<div id="mapper">
 	    <script>
-		function initMap() {
-                    map = new google.maps.Map(document.getElementById("mapper"),
-                        {
-                            center: {lat: 30.4133, lng: -91.1800},
-                            zoom: 14
-                        });
-                    }
+    		function initMap() {
+                map = new google.maps.Map(document.getElementById("mapper"),
+                    {
+                        center: {lat: 30.4133, lng: -91.1800},
+                        zoom: 14
+                    });
+                }
             </script>
 	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap"async defer></script>
 	</div>
-    </div>
+</div>
 </body>
 </html>
