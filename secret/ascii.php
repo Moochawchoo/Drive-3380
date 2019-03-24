@@ -23,18 +23,18 @@ include "../login/misc/pagehead.php";
         height: inherit;
         display: block;
         white-space: pre;
-	background-color: black;
+	    background-color: black;
     }
 
     #container {
         background-color: black;
         width: 45em;
         height: 250px;
-	margin: auto;
+	    margin: auto;
     }
 
     #buttonContainer{
-        margin: auto;
+        text-align:center;
     }
 
     #buttons a:link {
@@ -183,8 +183,8 @@ include "../login/misc/pagehead.php";
                 <a href="#" onclick="Start()" title="Start"> |&lt;</a>&nbsp;&nbsp;
                 <a href="#" onclick="FrameBack()" title="Back one frame"> 1&lt;</a>&nbsp;&nbsp;
                 <a href="#" onclick="Stop()" title="Stop"> #</a>&nbsp;&nbsp;
-                <a href="#" onclick="FrameAdvance()" title="Advance one frame"> &gt;1</a>&nbsp;&nbsp;
                 <a href="#" onclick="Play()" title="Play"> &gt;</a>&nbsp;&nbsp;
+                <a href="#" onclick="FrameAdvance()" title="Advance one frame"> &gt;1</a>&nbsp;&nbsp;
                 <a href="#" onclick="End()" title="End"> &gt;|</a>&nbsp;&nbsp;&nbsp;
             </font>
         </div>

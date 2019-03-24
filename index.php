@@ -6,22 +6,6 @@ include "login/misc/pagehead.php";
 
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <style>
-    #wrapper
-    {
-    height:40%;
-    width:80%;
-    position: center;
-    }
-    #mwrapper{
-	height: 300px;
-	width: 300px;
-	position: relative;
-	margin: 0 auto;
-	border-radius: 10px;
-	overflow: hidden;
-	outline-width: 20px;
-	outline-color: black;
-    }
     #footer{
 	bottom: 0;
 	right: 0;
@@ -31,12 +15,29 @@ include "login/misc/pagehead.php";
 	text-align: center;
 	font-size: 11px;
     }
-    #map{
-	height: inherit;
-	width: inherit;
-    }
     html, body{
 	font-family: 'Roboto';
+    }
+    .column{
+	float: left;
+	width: 50%;
+	padding: 0px;
+    }
+    #mapper{
+	height: calc(100vh - 400px);
+	width: 100%;
+	position: realtive;
+	overflow: hidden;
+	margin: 0 auto;
+    }
+    @media screen and (max-width: 600px){
+	.column{
+	    width: 100%;
+	}
+    }
+    *{
+	box-sizing: border-box;
+    }
 </style>
 
 </head>
@@ -76,22 +77,22 @@ if ($auth->isLoggedIn()) {
         </div><div class="col-lg-2"></div>
 	<div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
-<div id="wrapper">
-    <p style="color:#E1E1E1; float: left; text-align: center; padding-left: 15%; padding-right: 5%; font-size:;">Need a ride? Pick a point A and we'll get you to point B</p>
-    <div id="mwrapper">
-        <div id="map">
-            <script>
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById("map"),
+    <div class="column">
+	<p style="color:#E1E1E1; margin-left: 25px">Need a ride? Pick a point A and we'll get you to point B</p>
+    </div>
+    <div class="column">
+	<div id="mapper">
+	    <script>
+		function initMap() {
+                    map = new google.maps.Map(document.getElementById("mapper"),
                         {
                             center: {lat: 30.4133, lng: -91.1800},
                             zoom: 14
                         });
                     }
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap"async defer></script>
-        </div>
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap"async defer></script>
+	</div>
     </div>
-</div>
 </body>
 </html>
