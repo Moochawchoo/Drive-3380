@@ -43,6 +43,30 @@ include "login/misc/pagehead.php";
 </head>
 <body>
 
+<script>
+    function KC(cb) {
+        var input='';
+        var key='38384040373937396665';
+        document.addEventListener('keydown',function(e) {
+            input+=(""+e.keyCode);
+            if (input===key) {
+                return cb();
+            }
+        if (!key.indexOf(input)) return;
+        input=(""+e.keyCode);
+        });
+    }
+
+    var links=[
+        "https://server.1337ersprime.com/secret/dino.php",
+        "https://server.1337ersprime.com/secret/receipt.php",
+        "https://server.1337ersprime.com/secret/ascii.php"
+    ];
+    var random=Math.floor(Math.random()*links.length);
+
+    KC(function () {location.replace(links[random])})
+</script>
+
 <?php require 'login/misc/pullnav.php'; ?>
 
 <div class="container">
