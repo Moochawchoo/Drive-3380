@@ -24,7 +24,7 @@ include "login/misc/pagehead.php";
 	    padding: 0px;
     }
     #mapper{
-	    height: calc(100vh - 400px);
+	    height: calc(100vh - 365px);
 	    width: 100%;
 	    position: realtive;
 	    overflow: hidden;
@@ -84,7 +84,6 @@ if ($auth->isLoggedIn()) {
 }
 
 ?>
-        </div><div class="col-lg-2"></div>
 	<div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
 <div class="column">
