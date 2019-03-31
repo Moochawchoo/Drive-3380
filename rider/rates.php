@@ -17,18 +17,6 @@ include "../login/misc/pagehead.php";
     html, body{
         font-family: 'Roboto';
     }
-    .column{
-        float: left;
-        width: 50%;
-        padding: 0px;
-    }
-    #mapper{
-        height: calc(100vh - 400px);
-        width: 100%;
-        position: realtive;
-        overflow: hidden;
-        margin: 0 auto;
-    }
 </style>
     <?php require "../login/misc/pullnav.php"; ?>
 </head>
@@ -36,22 +24,30 @@ include "../login/misc/pagehead.php";
     <h1>
         <p style="color:#E1E1E1; text-align: center; ;">Our Rates</p>
     </h1>
-    <div class="column">
-        <p style="color:#E1E1E1; margin-left: 25px">Rates:</p>
-    </div>
-    <div class="column">
-        <div id="mapper">
-            <script>
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById("mapper"), {
-                        center: {lat: 30.4133, lng: -91.1800},
-                        zoom: 14
-                    });
-                }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"async defer></script>
-        </div>
-    </div>
+
+<p>1. <b>DriveScout</b> (a low-cost service which seats up to two passengers)<br />
+2. <b>DriveSquad</b> (a low-cost service which seats up to four passengers)<br />
+3. <b>DriveParty</b> (a mid-cost service which seats up to eight passengers)</p>
+<h3>Drive Rates: our current rates for these services:</h3>
+<p><strong>DriveScout</strong><br />
+Base Fare: $1.25<br />
+Per Minute: $0.15<br />
+Per Mile: $0.90<br />
+Cancellation Fee: $5<br />
+Service Fee: $1.75</p>
+<p><strong>DriveSquad</strong><br />
+Base Fare: $2<br />
+Per Minute: $0.25<br />
+Per Mile: $1.35<br />
+Cancellation Fee: $5<br />
+Service Fee: $1.75</p>
+<p><strong>DriveParty</strong><br />
+Base Fare: $2.50<br />
+Per Min: $0.30<br />
+Per Mile: $1.80<br />
+Cancellation Fee: $10<br />
+Service Fee: $1.75</p>
+   
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
 </html>
