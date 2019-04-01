@@ -76,7 +76,7 @@ include "login/misc/pagehead.php";
 if ($auth->isLoggedIn()) {
     echo '<div class="jumbotron text-center"><h1>Hi, '.$_SESSION['username'].'!</h1>
     <p>Click on your username in the top right corner to expose menu options</p></div>';
-    
+
 } else {
     echo '<div class="jumbotron text-center"><h1 class="display-1">Welcome to Drive</h1>
     <small>You are currently signed out.</small><br><br>
@@ -87,7 +87,7 @@ if ($auth->isLoggedIn()) {
 	<div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
 <div class="column">
-	<p style="color:#E1E1E1; margin-left: 25px">Need a ride? Pick a point A and we'll get you to point B</p>
+	<p style="color:#E1E1E1; margin-left: 25px"Drive is the ultimate resource for getting around efficiently. Use our price estimator to see which rideshare service is best for your ride. Don't want to use either? Use our own driver-friendly service instead. We allow our drivers to be in control and pick what rides they want to take. If you're someone who commutes using a rideshare service frequently, you can also schedule rides that repeat at whatever day or time you choose. No matter what you need, we'll make sure you enjoy the ride.</p>
 </div>
 <div class="column">
 	<div id="mapper">
