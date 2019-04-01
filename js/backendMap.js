@@ -40,7 +40,7 @@ function initMap()
 					}
 					addMarker(pos,map);
 				});
-			}); 
+			}), 
 				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			}
