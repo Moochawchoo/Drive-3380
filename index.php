@@ -26,7 +26,7 @@ include "login/misc/pagehead.php";
     }
     #mapper{
         border-radius: 25px;
-	    height: calc(100vh - 365px);
+	    height: calc(100vh - 360px);
 	    width: 100%;
 	    position: realtive;
 	    overflow: hidden;
@@ -81,8 +81,7 @@ if ($auth->isLoggedIn()) {
 
 } else {
     echo '<div class="jumbotron text-center"><h1 class="display-1">Welcome to Drive</h1>
-    <small>You are currently signed out.</small><br><br>
-    <p>You can sign in or create a new account by clicking "Sign In" in the top right corner!</p>';
+    <p>You can sign in or create a new account by clicking "Sign In" in the top right corner!</p></div>';
 }
 
 ?>
