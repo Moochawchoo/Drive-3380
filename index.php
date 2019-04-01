@@ -21,9 +21,11 @@ include "login/misc/pagehead.php";
     .column{
 	    float: left;
 	    width: 50%;
+        height: 50%;
 	    padding: 0px;
     }
     #mapper{
+        border-radius: 25px;
 	    height: calc(100vh - 365px);
 	    width: 100%;
 	    position: realtive;

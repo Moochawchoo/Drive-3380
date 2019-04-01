@@ -63,7 +63,7 @@ include "login/misc/pagehead.php";
 </head>
 <body>
     <h1>
-        <p style="color:#E1E1E1; text-align: center; ;">About Drive</p>       
+        <p style="color:#E1E1E1; text-align: center; ;">The Drive team</p>       
     </h1>
     <div class="content">
         <div class="row">
