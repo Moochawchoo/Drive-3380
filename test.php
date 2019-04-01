@@ -37,7 +37,6 @@ include "login/misc/pagehead.php";
     <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
-    <script src="js/backendMap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
     <div class="container">
 	<div id="wrapper">
