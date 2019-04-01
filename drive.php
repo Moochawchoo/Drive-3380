@@ -43,6 +43,17 @@ include "login/misc/pagehead.php";
 	<div id="wrapper">
 	    <div id="content">
 		<div id="map"></div>
+		    <script>
+                    var map;
+                    function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {
+                                lat: 30.4133,
+                                lng: -91.1800
+                            },
+                            zoom: 14
+                        });
+		    </script>
 	    </div>
 	</div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
