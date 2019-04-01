@@ -33,11 +33,11 @@ include "../login/misc/pagehead.php";
     </h1>
     <div id="content">
         <h3>
-            The current rates for our services:
+           <strong> The current rates for our services: </strong>
         </h3>
         <p>
         <font size = "5.5">
-            <strong>DriveScout</strong><br />
+            <strong>DriveScout:</strong><br />
         </font>
         <font size = "3.5">
             Seats up to two<br />
@@ -50,7 +50,7 @@ include "../login/misc/pagehead.php";
         </p>
         <p>
         <font size = "5.5">
-            <strong>DriveSquad</strong><br />
+            <strong>DriveSquad:</strong><br />
         </font>
         <font size = "3.5">
             Seats up to four<br />
@@ -63,7 +63,7 @@ include "../login/misc/pagehead.php";
         </p>
         <p>
         <font size = "5.5">
-            <strong>DriveParty</strong><br />
+            <strong>DriveParty:</strong><br />
         </font>
         <font size = "3.5">
             Seats up to eight<br />
