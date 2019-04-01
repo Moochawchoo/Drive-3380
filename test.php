@@ -36,7 +36,7 @@ include "login/misc/pagehead.php";
 </style>
     <?php require "login/misc/pullnav.php"; ?>
 </head>
-<body style="background-image:url('cars overhead.jpg');">
+<body style="background-image:url('assets/cars overhead.jpg');">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
     <div class="container">
 	<div id="wrapper">
@@ -44,7 +44,7 @@ include "login/misc/pagehead.php";
 		<div id="map"></div>
 	    </div>
 	</div>
-  <img src="man driving with gps.jpg" style="width:100%">
+  <!-- <img src="man driving with gps.jpg" style="width:100%"> -->
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
 </body>
