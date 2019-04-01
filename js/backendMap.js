@@ -35,8 +35,8 @@ function initMap()
 						var pos
 						{ 
 							lat: results[i].lat,
-							lng: results[i].lng;
-						}
+							lng: results[i].lng
+						};
 					}
 					addMarker(pos,map);
 				});
