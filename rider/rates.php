@@ -32,11 +32,6 @@ include "../login/misc/pagehead.php";
         <p style="color:#E1E1E1; text-align: center; ;">Our Rates</p>
     </h1>
     <div id="content">
-        <p>
-            1. <b>DriveScout</b> (seats up to two)<br />
-            2. <b>DriveSquad</b> (seats up to four)<br />
-            3. <b>DriveParty</b> (seats up to eight)
-        </p>
         <h3>
             The current rates for our services:
         </h3>
@@ -45,6 +40,7 @@ include "../login/misc/pagehead.php";
             <strong>DriveScout</strong><br />
         </font>
         <font size = "3.5">
+            Seats up to two<br />
             Base Fare: $1.25<br />
             Per Minute: $0.15<br />
             Per Mile: $0.90<br />
@@ -57,6 +53,7 @@ include "../login/misc/pagehead.php";
             <strong>DriveSquad</strong><br />
         </font>
         <font size = "3.5">
+            Seats up to four<br />
             Base Fare: $2<br />
             Per Minute: $0.25<br />
             Per Mile: $1.35<br />
@@ -69,6 +66,7 @@ include "../login/misc/pagehead.php";
             <strong>DriveParty</strong><br />
         </font>
         <font size = "3.5">
+            Seats up to eight<br />
             Base Fare: $2.50<br />
             Per Min: $0.30<br />
             Per Mile: $1.80<br />
