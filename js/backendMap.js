@@ -44,7 +44,7 @@ function initMap()
 				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			}
-				    });
+				    )};
 		} 
 		else
 		{
