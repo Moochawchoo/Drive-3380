@@ -17,6 +17,7 @@ include "login/misc/pagehead.php";
     html, body{
 	font-family: 'Roboto';
     }
+
     html{
         box-sizing: border-box;
     }    
@@ -46,12 +47,16 @@ include "login/misc/pagehead.php";
         clear: both;
         display: table;
     }
+    .content {
+        height: 80%;
+        width: 80%;
+    }
     .title {
         color: grey;
     }
     .button {
         border: none;
-        outine: 0;
+        outline: 0;
         display: inline-block;
         padding: 8px;
         color: green;
@@ -70,6 +75,7 @@ include "login/misc/pagehead.php";
     <h1>
         <p style="color:#E1E1E1; text-align: center; ;">About Drive</p>       
     </h1>
+    <div class="content">
     <div class="row">
     <div class="column">
         <div class="card">
@@ -161,7 +167,7 @@ include "login/misc/pagehead.php";
       </div>
     </div>
   </div>
-
+    </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
 </html>
