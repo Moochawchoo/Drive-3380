@@ -30,7 +30,7 @@ function initMap()
 				con.query("SELECT lat, lng FROM member_loc", function (err, results, feilds)
 					{
 					if(err) throw err; 
-					for(var i = 0, i < results.length, i++)
+					for(var i = 0; i < results.length; i++)
 					{
 						var pos
 						{ 
