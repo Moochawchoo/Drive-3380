@@ -13,6 +13,11 @@ include "login/misc/pagehead.php";
 	    text-align: center;
 	    font-size: 11px;
     }
+    #content {
+        height: 80%;
+        width: 80%;
+        float: center;
+    }
 
     html, body{
 	font-family: 'Roboto';
@@ -39,6 +44,9 @@ include "login/misc/pagehead.php";
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
+    .carde {
+
+    }
     .container {
         padding: 0 16px;
     }
@@ -47,26 +55,8 @@ include "login/misc/pagehead.php";
         clear: both;
         display: table;
     }
-    .content {
-        height: 80%;
-        width: 80%;
-    }
     .title {
         color: grey;
-    }
-    .button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: green;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-    }
-    .button:hover {
-        background-color: #555;
     }
 </style>
     <?php require "login/misc/pullnav.php"; ?>
@@ -76,98 +66,96 @@ include "login/misc/pagehead.php";
         <p style="color:#E1E1E1; text-align: center; ;">About Drive</p>       
     </h1>
     <div class="content">
-    <div class="row">
-    <div class="column">
-        <div class="card">
-        <img src="" alt="" style="width:100%">
-         <div class="container">
-            <h2>Hunter Adams</h2>
-            <p class="title">Front-end</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>example@example.com</p>
-            <p><button class="button">Contact</button></p>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Hunter Adams</h2>
+                        <p class="title">Front-end</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Chris Calvo</h2>
+                        <p class="title">Front-end</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Leslyanne Warrington</h2>
+                        <p class="title">Front-end</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Brandon Norman</h2>
+                        <p class="title">Back-end</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
 
-  <div class="column">
-    <div class="card">
-      <img src="" alt="" style="width:100%">
-      <div class="container">
-        <h2>Chris Calvo</h2>
-        <p class="title">Front-end</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="" alt="" style="width:100%">
-      <div class="container">
-        <h2>Leslyanne Warrington</h2>
-        <p class="title">Front-end</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-    </div>
-    <div class="row">
-    <div class="column">
-        <div class="card">
-        <img src="" alt="" style="width:100%">
-         <div class="container">
-            <h2>Brandon Norman</h2>
-            <p class="title">Back-end</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>example@example.com</p>
-            <p><button class="button">Contact</button></p>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                         <h2>Philip Kerr</h2>
+                        <p class="title">Back-end</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Sean Wilkinson</h2>
+                        <p class="title">Back-end</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="column">
+                <div class="carde">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container"></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="" alt="" style="width:100%">
+                    <div class="container">
+                        <h2>Robert Zhong</h2>
+                        <p class="title">Almighty Server Guy</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="" alt="" style="width:100%">
-      <div class="container">
-        <h2>Philip Kerr</h2>
-        <p class="title">Back-end</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <img src="" alt="" style="width:100%">
-      <div class="container">
-        <h2>Sean Wilkinson</h2>
-        <p class="title">Back-end</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-    </div>
-    <div class="row">
-        <div class="column">
-        <div class="card">
-        <img src="" alt="" style="width:100%">
-      <div class="container">
-        <h2>Robert Zhong</h2>
-        <p class="title">Almighty Server-guy</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-    </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
 </html>
