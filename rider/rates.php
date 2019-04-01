@@ -9,12 +9,11 @@ include "../login/misc/pagehead.php";
 	    bottom: 0;
 	    right: 0;
 	    left: 0;
-	    position: relative;
+	    position: fixed;
 	    text-align: center;
 	    font-size: 11px;
     }
     #content{
-        bottom: 0;
         right: 0;
         left: 0;
         position: absolute;
