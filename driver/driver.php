@@ -34,7 +34,6 @@ include "../login/misc/pagehead.php";
     <h1>
         <p style="color:#E1E1E1; text-align: center; ;">Driver Registration</p>
     </h1>
-      <?php require '../login/misc/pullnav.php'; ?>
         <div class="container">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
