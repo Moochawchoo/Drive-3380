@@ -53,6 +53,7 @@ include "login/misc/pagehead.php";
                             },
                             zoom: 14
                         });
+		    }
 		    </script>
 			</div>
 	    </div>
