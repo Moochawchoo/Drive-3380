@@ -37,7 +37,6 @@ include "../login/misc/pagehead.php";
         <div class="container">
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <h2><?php echo $title;?></h2>
                 <form id="profileForm" enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="row">
@@ -65,7 +64,7 @@ include "../login/misc/pagehead.php";
                               <input type="text" class="form-control editprofile" name="firstname" id="firstname" value="<?php echo $usr['FirstName']; ?>">
                               <label for="lastname" class="label label-default">Last Name</label>
                               <input type="text" class="form-control editprofile" name="lastname" id="lastname" value="<?php echo $usr['LastName']; ?>">
-                              <br/> </div>
+                              </div>
                           <div class="col-sm-6">
                               <br/>
                               <label for="driverID" class="label label-default">License ID number</label>
