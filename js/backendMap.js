@@ -40,12 +40,12 @@ function initMap()
 					}
 					addMarker(pos,map);
 				});
-			}, 
+			}); 
 				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			}
-				    )};
-		)} 
+				    });
+		} 
 		else
 		{
 		// Browser doesn't support Geolocation
