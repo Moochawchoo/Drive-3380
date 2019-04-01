@@ -45,7 +45,7 @@ include "login/misc/pagehead.php";
 		<div id="map"></div>
 	    </div>
 	</div>
-  <img src="" alt="Car" style="width:100%">
+  <img src="man driving with gps.jpg" style="width:100%">
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
 </body>
