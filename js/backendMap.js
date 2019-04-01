@@ -32,7 +32,7 @@ function initMap()
 					if(err) throw err; 
 					for(var i = 0; i < results.length; i++)
 					{
-						var pos
+						var pos =
 						{ 
 							lat: results[i].lat,
 							lng: results[i].lng
