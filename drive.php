@@ -38,6 +38,7 @@ include "login/misc/pagehead.php";
 </head>
 <body>
     <script src="js/bundle.js"></script>
+    <script src ="js/backendMap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
     <div class="container">
 	<div id="wrapper">
