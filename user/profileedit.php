@@ -15,7 +15,16 @@ if (@get_headers($usr['UserImage'])[0] == 'HTTP/1.1 404 Not Found' || $usr['User
 <script src="js/profileupdate.js"></script>
 <script src="js/croppie.min.js"></script>
 <link href="css/croppie.min.css" rel="stylesheet" media="screen">
-
+<style>
+  .btn-primary{
+    border: none;
+    border-radius: 3px;
+    background-color: #B88A1D;
+  }
+  .btn-primary:hover{
+    background-color: #E2B448;
+  }
+</style>
 </head>
 <body>
   <?php require '../login/misc/pullnav.php'; ?>
@@ -67,7 +76,7 @@ if (@get_headers($usr['UserImage'])[0] == 'HTTP/1.1 404 Not Found' || $usr['User
                     <div class="row">
                         <div class="col-sm-12">
                             <div id="message"></div>
-                            <button type="submit" class="btn btn-primary" id="submitbtn">Save Changes</button>  </div>
+                            <button type="submit" class="btn-primary" id="submitbtn">Save Changes</button>
                     </div>
             </form>
             </div>
