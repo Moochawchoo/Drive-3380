@@ -84,7 +84,7 @@ include "../login/misc/pagehead.php";
                         <div class="row">
                             <div class="col-sm-12">
                                 <div id="message"></div>
-                                <button type="submit" class="btn btn-primary" id="submitbtn">Save Changes</button>  </div>
+                                <button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>  </div>
                         </div>
                     </div>
                 </form>
