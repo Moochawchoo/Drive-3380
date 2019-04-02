@@ -37,8 +37,8 @@ function initMap()
 							lat: results[i].lat,
 							lng: results[i].lng
 						};
-					}
 					addMarker(pos,map);
+					}
 				});
 			}), 
 				    function() {
