@@ -2,37 +2,8 @@
 $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
-if(isset($_POST['lat']) && isset($_POST['lng'])}
-{
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "INSERT INTO member_loc (lat, lng)
-VALUES ( $_POST['lat'],$_POST['lng'] )";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-$sql = "SELECT lat FROM member_loc";
-$resultLat = $conn->query($sql);
-$sql = "SELECT lng FROM member_loc";
-$resultLng = $conn->query($sql);
-
-}
-$conn->close();
-}
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-<html>
 <style>
     #map{
 	top: 0%;
@@ -73,11 +44,19 @@ $conn->close();
 	    <div id="content">
 		<div id="map">
 		    <script>
+                    var mysql = require('mysql');
+var con = mysql.createConnection(
+{
+	host:
+	user:
+	password:
+	database:
+});
 var map, infoWindow;
 function initMap() 
 {
 	map = new google.maps.Map(document.getElementById('map'), 
-	{
+				  {
 		center: {lat: 30.4133, lng: -91.1800},
 		zoom: 14
 	});
@@ -86,19 +65,38 @@ function initMap()
 	{
 	navigator.geolocation.getCurrentPosition(function(position) 
 			{
-				var userlat = position.coords.latitude;
-				var userlng = position.coords.latitude;
-			}), function() 
+			con.connect(function(err)
 				{
+				if(err) throw err;
+				var sql = "INSERT INTO member_loc (userid, lat, lng) VALUES ( ,position.coords.latitude, position.coords.longitude)";
+				con.query(sql, function(err,result)
+					{
+					if(err) throw err;
+				});
+				con.query("SELECT lat, lng FROM member_loc", function (err, results, feilds)
+					{
+					if(err) throw err; 
+					for(var i = 0; i < results.length; i++)
+					{
+						var pos =
+						{ 
+							lat: results[i].lat,
+							lng: results[i].lng
+						};
+					}
+					addMarker(pos,map);
+				});
+			}), 
+				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
-				}
-			);
-	} 
-	else
-	{
-	// Browser doesn't support Geolocation
-	handleLocationError(false, infoWindow, map.getCenter());
-	}
+			}
+				    });
+		} 
+		else
+		{
+		// Browser doesn't support Geolocation
+		handleLocationError(false, infoWindow, map.getCenter());
+		}
 }
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
@@ -114,9 +112,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
 </body>
-<form action="/drive.php">
-<input type="text" name="lat" value=<script>userlat</script>><br>
-<input type="text" name="lnt" value=<script>userlng</script>><br><br>
-<input type="submit" value="Submit">
-</form>
 </html>
