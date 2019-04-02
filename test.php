@@ -44,7 +44,7 @@ include "login/misc/pagehead.php";
 
     .hero-image {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/cars overhead.jpg");
-      height: 50%;
+      height: 100%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -82,9 +82,9 @@ include "login/misc/pagehead.php";
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
     <div class="hero-image">
       <div class="hero-text">
-        <h1>I am John Doe</h1>
-        <p>And I'm a Photographer</p>
-        <button>Hire me</button>
+        <h1>Let's Get on the Road</h1>
+        <p>Drive is here to help you get where you want, when you want to.</p>
+        <button>Start Here</button>
       </div>
     </div>
     <div class="container">
