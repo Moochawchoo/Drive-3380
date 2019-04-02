@@ -10,7 +10,7 @@ $dbname = "myDB";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = "INSERT INTO member_loc (lat, lng)
 VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
@@ -63,75 +63,79 @@ $conn->close();
     <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
-    <div class="container">
-	<div id="wrapper">
-	    <div id="content">
-		<div id="map">
-		<script>
-var map, infoWindow;
-function initMap() 
-{
-	map = new google.maps.Map(document.getElementById('map'), 
-				  {
-		center: {lat: 30.4133, lng: -91.1800},
-		zoom: 14
-	});
-	infoWindow = new google.maps.InfoWindow;
-	if (navigator.geolocation) 
-	{
-	navigator.geolocation.getCurrentPosition(function(position) 
-			{ 
-			$(document).ready(function()
-			{
-			createCookie("latitude",position.coords.latitude,5);
-			createCookie("longitude",position.coords.longitude,5);
-			});
-			var resultLat = <?php echo $_resultLat[] ?>;
-			var resultLng = <?php echo $_resultLng[] ?>;
-					for(var i = 0; resultLat.length; i++)
-					{
-						var pos =
-						{ 
-							lat: resultLat[i],
-							lng: resultLng[i]
-						};
-						addMarker(pos,map);
-					}
-			}), 
-				    function() {
-				handleLocationError(true, infoWindow, map.getCenter());
-			}
-		} 
-		else
-		{
-		// Browser doesn't support Geolocation
-		handleLocationError(false, infoWindow, map.getCenter());
-		}
-}
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-}
-function createCookie(var name, var coord, var days){
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-    } 
-    else {
-        expires = "";
-    }
-    document.cookie = userid + "=" + coord + expires + "; path=\";
-}
-		    </script>
-			</div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
+  <div class="container">
+    <div id="wrapper">
+      <div id="content">
+        <div id="map">
+      		<script>
+            var map, infoWindow;
+            function initMap()
+            {
+            	map = new google.maps.Map(document.getElementById('map'),
+            				  {
+            		center: {lat: 30.4133, lng: -91.1800},
+            		zoom: 14
+            	});
+            	infoWindow = new google.maps.InfoWindow;
+            	if (navigator.geolocation)
+            	{
+            	navigator.geolocation.getCurrentPosition(function(position)
+            			{
+            			$(document).ready(function()
+            			{
+            			createCookie("latitude",position.coords.latitude,5);
+            			createCookie("longitude",position.coords.longitude,5);
+            			});
+            			var resultLat = <?php echo $_resultLat[] ?>;
+            			var resultLng = <?php echo $_resultLng[] ?>;
+            					for(var i = 0; resultLat.length; i++)
+            					{
+            						var pos =
+            						{
+            							lat: resultLat[i],
+            							lng: resultLng[i]
+            						};
+            						addMarker(pos,map);
+            					}
+            			}),
+            				    function() {
+            				handleLocationError(true, infoWindow, map.getCenter());
+            			}
+            		}
+            		else
+            		{
+            		// Browser doesn't support Geolocation
+            		handleLocationError(false, infoWindow, map.getCenter());
+            		}
+            }
+            function handleLocationError(browserHasGeolocation, infoWindow, pos)
+            {
+                infoWindow.setPosition(pos);
+                infoWindow.setContent(browserHasGeolocation ?
+                    'Error: The Geolocation service failed.' :
+                    'Error: Your browser doesn\'t support geolocation.');
+                infoWindow.open(map);
+            }
+            function createCookie(var name, var coord, var days)
+            {
+                if (days)
+                {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toGMTString();
+                }
+                else
+                {
+                    expires = "";
+                }
+                document.cookie = userid + "=" + coord + expires + "; path=\\";
+            }
+          </script>
+			  </div>
 	    </div>
-	</div>
-    <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
     </div>
+    <div id="footer"><header style="color:#b3b3b3">Copyright © 2019 Drive</header></div>
+  </div>
 </body>
 </html>
