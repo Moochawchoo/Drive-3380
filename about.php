@@ -8,7 +8,7 @@ include "login/misc/pagehead.php";
 	    bottom: 0;
 	    right: 0;
 	    left: 0;
-	    position: relative;
+	    position: absolute;
 	    width: 100%;
 	    text-align: center;
 	    font-size: 11px;
@@ -17,7 +17,6 @@ include "login/misc/pagehead.php";
         height: 100%;
         width: 100%;
         position: absolute;
-        float: center;
         overflow: hidden;
     }
 
@@ -33,7 +32,7 @@ include "login/misc/pagehead.php";
     }
     .column{
         float: left;
-        width: 33.3%;
+        width: 33%;
         margin-bottom: 16px;
         padding 0 8px;
     }
