@@ -74,7 +74,7 @@ include "login/misc/pagehead.php";
                         <h2>Hunter Adams</h2>
                         <p class="title">Front-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>KetchupHa@gmail.com.com</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@ include "login/misc/pagehead.php";
                         <h2>Chris Calvo</h2>
                         <p class="title">Front-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>Spirit@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@ include "login/misc/pagehead.php";
                         <h2>Leslyanne Warrington</h2>
                         <p class="title">Front-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>BandGekc0@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@ include "login/misc/pagehead.php";
                         <h2>Brandon Norman</h2>
                         <p class="title">Back-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>Branduhn@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@ include "login/misc/pagehead.php";
                          <h2>Philip Kerr</h2>
                         <p class="title">Back-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>DReplicant@example.com</p>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ include "login/misc/pagehead.php";
                         <h2>Sean Wilkinson</h2>
                         <p class="title">Back-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>SWlkns@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@ include "login/misc/pagehead.php";
                         <h2>Robert Zhong</h2>
                         <p class="title">Almighty Server Guy</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>example@example.com</p>
+                        <p>Rz@1337ersprime.com</p>
                     </div>
                 </div>
             </div>

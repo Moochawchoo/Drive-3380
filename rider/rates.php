@@ -29,18 +29,18 @@ include "../login/misc/pagehead.php";
 </head>
 <body>
     <h1>
-        <p style="color:#E1E1E1; text-align: center; ;">Our Rates</p>
+        <p style="color:#E1E1E1; text-align: center; ;">Drive Rates</p>
     </h1>
     <div id="content">
         <h3>
-           <strong> The current rates for our services: </strong>
+           <strong> We offer different pricing depending on the number of riders: </strong>
         </h3>
         <p>
-        <font size = "5.5">
+        <h9>
             <strong>DriveScout:</strong><br />
-        </font>
+        </h9>
         <font size = "3.5">
-            Seats up to two<br />
+            Seats up to two people<br />
             Base Fare: $1.25<br />
             Per Minute: $0.15<br />
             Per Mile: $0.90<br />
@@ -49,11 +49,11 @@ include "../login/misc/pagehead.php";
         </font>
         </p>
         <p>
-        <font size = "5.5">
+        <h9>
             <strong>DriveSquad:</strong><br />
-        </font>
+        </h9>
         <font size = "3.5">
-            Seats up to four<br />
+            Seats up to four people<br />
             Base Fare: $2<br />
             Per Minute: $0.25<br />
             Per Mile: $1.35<br />
@@ -62,11 +62,11 @@ include "../login/misc/pagehead.php";
         </font>
         </p>
         <p>
-        <font size = "5.5">
+        <h9>
             <strong>DriveParty:</strong><br />
-        </font>
+        </h9>
         <font size = "3.5">
-            Seats up to eight<br />
+            Seats up to eight people<br />
             Base Fare: $2.50<br />
             Per Min: $0.30<br />
             Per Mile: $1.80<br />
