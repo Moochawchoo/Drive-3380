@@ -45,6 +45,7 @@ include "login/misc/pagehead.php";
     .hero-image {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/cars overhead.jpg");
       height: 100%;
+      margin-top: -15px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
