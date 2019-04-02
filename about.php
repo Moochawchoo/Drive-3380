@@ -151,7 +151,7 @@ include "login/misc/pagehead.php";
                         <h2>Robert Zhong</h2>
                         <p class="title">Almighty Server Guy</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>Rz@1337ersprime.com</p>
+                        <p>robzhong@1337ersprime.com</p>
                     </div>
                 </div>
             </div>
