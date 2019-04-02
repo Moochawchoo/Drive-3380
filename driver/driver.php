@@ -24,10 +24,10 @@ include "../login/misc/pagehead.php";
 	    text-align: center;
 	    font-size: 11px;
     }
-    .btn btn-primary{
+    .btn-primary{
       background-color: #B88A1D;
     }
-    .btn btn-primary:hover{
+    .btn-primary:hover{
       background-color: #E2B448;
     }
     html, body{
@@ -84,7 +84,7 @@ include "../login/misc/pagehead.php";
                         <div class="row">
                             <div class="col-sm-12">
                                 <div id="message"></div>
-                                <button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>  </div>
+                                <button type="submit" class="btn-primary" id="submitbtn">Submit</button>  </div>
                         </div>
                     </div>
                 </form>
