@@ -24,6 +24,12 @@ include "../login/misc/pagehead.php";
 	    text-align: center;
 	    font-size: 11px;
     }
+    .button{
+      background-color: #B88A1D;
+    }
+    .button:hover{
+      background-color: #E2B448;
+    }
     html, body{
         font-family: 'Roboto';
     }
