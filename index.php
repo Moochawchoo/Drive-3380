@@ -30,7 +30,7 @@ include "login/misc/pagehead.php";
       border-radius: 25px;
     height: calc(100vh - 360px);
     width: 100%;
-    position: realtive;
+    position: relative;
     overflow: hidden;
     margin: 0 auto;
   }
