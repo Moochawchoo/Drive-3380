@@ -87,7 +87,7 @@ include "login/misc/pagehead.php";
       }
     ?>
     <div id="footer">
-      <header style="color:#b3b3b3">Copyright © 2019 Drive></header>
+      <header style="color:#b3b3b3">Copyright © 2019 Drive</header>
     </div>
   </div>
   <div class = "text-container">
