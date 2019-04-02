@@ -25,6 +25,8 @@ include "../login/misc/pagehead.php";
 	    font-size: 11px;
     }
     .btn-primary{
+      border: none;
+      border-radius: 3px;
       background-color: #B88A1D;
     }
     .btn-primary:hover{
@@ -84,7 +86,8 @@ include "../login/misc/pagehead.php";
                         <div class="row">
                             <div class="col-sm-12">
                                 <div id="message"></div>
-                                <button type="submit" class="btn-primary" id="submitbtn">Submit</button>  </div>
+                                <button type="submit" class="btn-primary" id="submitbtn">Submit</button>
+                            </div>
                         </div>
                     </div>
                 </form>
