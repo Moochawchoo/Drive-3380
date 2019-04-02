@@ -132,7 +132,7 @@ include "login/misc/pagehead.php";
                     <div class="container">
                         <h2>Sean Wilkinson</h2>
                         <p class="title">Back-end</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem. Doesn't know how to Google.</p>
                         <p>SWlkns@gmail.com</p>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ include "login/misc/pagehead.php";
                     <div class="container">
                         <h2>Robert Zhong</h2>
                         <p class="title">Almighty Server Guy</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>Here for all your server needs.<strike>Please send help. This is my life now</strike></p>
                         <p>robzhong@1337ersprime.com</p>
                     </div>
                 </div>
