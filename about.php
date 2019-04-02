@@ -43,6 +43,7 @@ include "login/misc/pagehead.php";
     }
     .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #E1E1E1;
     }
     .carde {
 
