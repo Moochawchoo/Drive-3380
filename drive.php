@@ -63,10 +63,10 @@ include "login/misc/pagehead.php";
 							lng: position.coords.lonitude
 						};
 					map.setCenter(pos);
-			}), 
+			}, 
 				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
-			}
+			});
 		} 
 		else
 		{
