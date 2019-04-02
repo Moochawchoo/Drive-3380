@@ -44,8 +44,16 @@ include "login/misc/pagehead.php";
 	    <div id="content">
 		<div id="map">
 		    <script>
-                    var map, infoWindow;
-                    function initMap() 
+                    var mysql = require('mysql');
+var con = mysql.createConnection(
+{
+	host:
+	user:
+	password:
+	database:
+});
+var map, infoWindow;
+function initMap() 
 {
 	map = new google.maps.Map(document.getElementById('map'), 
 				  {
@@ -57,16 +65,32 @@ include "login/misc/pagehead.php";
 	{
 	navigator.geolocation.getCurrentPosition(function(position) 
 			{
+			con.connect(function(err)
+				{
+				if(err) throw err;
+				var sql = "INSERT INTO member_loc (userid, lat, lng) VALUES ( ,position.coords.latitude, position.coords.longitude)";
+				con.query(sql, function(err,result)
+					{
+					if(err) throw err;
+				});
+				con.query("SELECT lat, lng FROM member_loc", function (err, results, feilds)
+					{
+					if(err) throw err; 
+					for(var i = 0; i < results.length; i++)
+					{
 						var pos =
 						{ 
-							lat: position.coords.latitude,
-                                    			lng: position.coords.longitude
+							lat: results[i].lat,
+							lng: results[i].lng
 						};
-					map.setCenter(pos);
-			}, 
+					}
+					addMarker(pos,map);
+				});
+			}), 
 				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
-			});
+			}
+				    });
 		} 
 		else
 		{
