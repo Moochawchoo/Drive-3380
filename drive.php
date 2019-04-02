@@ -3,16 +3,16 @@ $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+$username = "root";
+$password = "root";
+$dbname = "login";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+} 
 
-$sql = "INSERT INTO member_loc (lat, lng)
+$sql = "INSERT INTO $tbl_member_loc (lat, lng)
 VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
 
 if ($conn->query($sql) === TRUE) {
@@ -20,9 +20,9 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$sql = "SELECT lat FROM member_loc";
+$sql = "SELECT lat FROM $tbl_member_loc";
 $resultLat = $conn->query($sql);
-$sql = "SELECT lng FROM member_loc";
+$sql = "SELECT lng FROM $tbl_member_loc";
 $resultLng = $conn->query($sql);
 
 }
