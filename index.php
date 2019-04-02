@@ -17,15 +17,14 @@ include "login/misc/pagehead.php";
   html, body{
     font-family: 'Roboto';
   }
-  .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      background-color: #E1E1E1;
-  }
   .column{
     float: left;
     width: 50%;
       height: 50%;
     padding: 0px;
+  }
+  .container{
+      background-color: #E1E1E1;
   }
   #mapper{
       border-radius: 25px;
@@ -86,7 +85,7 @@ include "login/misc/pagehead.php";
       <header style="color:#b3b3b3">Copyright © 2019 Drive></header>
     </div>
   </div>
-  <div class = "card">
+  <div class = "container">
     <div class="column">
     	<p style = style="margin-left:25px">Drive is the ultimate resource for getting around efficiently.
         Use our price estimator to see which rideshare service is best for your ride. Don't want to use either?
