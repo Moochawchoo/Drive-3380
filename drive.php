@@ -57,32 +57,16 @@ include "login/misc/pagehead.php";
 	{
 	navigator.geolocation.getCurrentPosition(function(position) 
 			{
-			con.connect(function(err)
-				{
-				if(err) throw err;
-				var sql = "INSERT INTO member_loc (userid, lat, lng) VALUES ( ,position.coords.latitude, position.coords.longitude)";
-				con.query(sql, function(err,result)
-					{
-					if(err) throw err;
-				});
-				con.query("SELECT lat, lng FROM member_loc", function (err, results, feilds)
-					{
-					if(err) throw err; 
-					for(var i = 0; i < results.length; i++)
-					{
 						var pos =
 						{ 
-							lat: results[i].lat,
-							lng: results[i].lng
+							lat: position.coords.latitide,
+							lng: position.coords.lonitude
 						};
-					}
-					addMarker(pos,map);
-				});
+					map.setCenter(pos);
 			}), 
 				    function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			}
-				    });
 		} 
 		else
 		{
