@@ -67,9 +67,9 @@ include "../login/misc/pagehead.php";
                               <label class="label label-default">Driver information:</label>
                               <br/>
                               <label for="firstname" class="label label-default">First Name</label>
-                              <input type="text" class="form-control editprofile" name="firstname" id="firstname" value="<?php echo $usr['FirstName']; ?>">
+                              <input type="text" class="form-control" name="firstname" id="firstname" value="<?php echo $usr['FirstName']; ?>">
                               <label for="lastname" class="label label-default">Last Name</label>
-                              <input type="text" class="form-control editprofile" name="lastname" id="lastname" value="<?php echo $usr['LastName']; ?>">
+                              <input type="text" class="form-control" name="lastname" id="lastname" value="<?php echo $usr['LastName']; ?>">
                               </div>
                           <div class="col-sm-6">
                               <br/>
