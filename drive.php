@@ -59,8 +59,8 @@ include "login/misc/pagehead.php";
 			{
 						var pos =
 						{ 
-							lat: position.coords.latitide,
-							lng: position.coords.lonitude
+							lat: position.coords.latitude,
+                                    			lng: position.coords.longitude
 						};
 					map.setCenter(pos);
 			}, 
