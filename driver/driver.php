@@ -43,12 +43,12 @@ include "../login/misc/pagehead.php";
         <p style="color:#E1E1E1; text-align: center; ;">Driver Registration</p>
     </h1>
         <div class="container">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
                 <form id="profileForm" enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="row">
-                          <div class="col-sm-6">
+                          <div class="col-md-6">
                               <label class="label label-default">Vehicle information:</label>
                               <br/>
                               <label for="carMake" class="label label-default">Vehicle Make</label>
@@ -56,7 +56,7 @@ include "../login/misc/pagehead.php";
                               <label for="carModel" class="label label-default">Vehicle Model</label>
                               <input type="text" class="form-control" name="carModel" id="carModel" placeholder="Vehicle Model" value="<?php echo $usr['carModel']; ?>">
                               <br/> </div>
-                          <div class="col-sm-6">
+                          <div class="col-md-6">
                               <br/>
                               <label for="carYear" class="label label-default">Vehicle Year</label>
                               <input type="text" class="form-control" name="carYear" id="carYear" placeholder="Year of Release" value="<?php echo $usr['carYear']; ?>">
@@ -65,7 +65,7 @@ include "../login/misc/pagehead.php";
                               <br/> <br/></div>
                         </div>
                         <div class="row">
-                          <div class="col-sm-6">
+                          <div class="col-md-6">
                               <label class="label label-default">Driver information:</label>
                               <br/>
                               <label for="firstname" class="label label-default">First Name</label>
@@ -73,7 +73,7 @@ include "../login/misc/pagehead.php";
                               <label for="lastname" class="label label-default">Last Name</label>
                               <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" value="<?php echo $usr['LastName']; ?>">
                               </div>
-                          <div class="col-sm-6">
+                          <div class="col-md-6">
                               <br/>
                               <label for="driverID" class="label label-default">License ID number</label>
                               <input type="text" class="form-control" name="driverID" id="driverID" placeholder="ID#" value="<?php echo $usr['driverID']; ?>">
