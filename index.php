@@ -24,13 +24,18 @@ include "login/misc/pagehead.php";
   .column{
     float: left;
     width: 50%;
-      height: 50%;
+    height: 50%;
     padding: 0px;
+  }
+  .column.left{    
+    height: 80%;
+    width: 80%;
+    float: center;
   }
   #mapper{
       border-radius: 25px;
     height: calc(100vh - 360px);
-    width: 100%;
+    width: 90%;
     position: realtive;
     overflow: hidden;
     margin: 0 auto;
@@ -87,8 +92,8 @@ include "login/misc/pagehead.php";
     </div>
   </div>
   <div class = "card">
-    <div class="column">
-    	<p style = style="margin-left:25px">Drive is the ultimate resource for getting around efficiently.
+    <div class="column.left">
+    	<p style = style="margin-left:25px; font-size: 14px;">Drive is the ultimate resource for getting around efficiently.
         Use our price estimator to see which rideshare service is best for your ride. Don't want to use either?
         Use our own driver-friendly service instead. We allow our drivers to be in control and pick what rides
         they want to take. If you're someone who commutes using a rideshare service frequently, you can also

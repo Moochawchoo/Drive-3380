@@ -14,9 +14,11 @@ include "login/misc/pagehead.php";
 	    font-size: 11px;
     }
     #content {
-        height: 80%;
-        width: 80%;
+        height: 100%;
+        width: 100%;
+        position: absolute;
         float: center;
+        overflow: hidden;
     }
 
     html, body{
@@ -84,8 +86,8 @@ include "login/misc/pagehead.php";
                     <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Chris Calvo</h2>
-                        <p class="title">Front-end</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p class="title">Apprentice Coder</p>
+                        <p>Does things and dissapears into the void.</p>
                         <p>Spirit@gmail.com</p>
                     </div>
                 </div>
@@ -132,7 +134,7 @@ include "login/misc/pagehead.php";
                     <div class="container">
                         <h2>Sean Wilkinson</h2>
                         <p class="title">Back-end</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem. Doesn't know how to Google.</p>
+                        <p>Doesn't know how to Google.</p>
                         <p>SWlkns@gmail.com</p>
                     </div>
                 </div>
@@ -151,7 +153,7 @@ include "login/misc/pagehead.php";
                     <div class="container">
                         <h2>Robert Zhong</h2>
                         <p class="title">Almighty Server Guy</p>
-                        <p>Here for all your server needs.<strike>Please send help. This is my life now</strike></p>
+                        <p>Here for all your server needs.<br/><strike>Please send help. This is my life now</strike></p>
                         <p>robzhong@1337ersprime.com</p>
                     </div>
                 </div>
