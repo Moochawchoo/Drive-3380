@@ -75,7 +75,7 @@ include "login/misc/pagehead.php";
                     <div class="container">
                         <h2>Hunter Adams</h2>
                         <p class="title">HTML-slave</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>I'm occasionally capable of coding things right on the first try, I swear.</p>
                         <p>huadams.2021@gmail.com</p>
                     </div>
                 </div>
