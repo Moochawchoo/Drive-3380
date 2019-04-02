@@ -25,7 +25,7 @@ include "login/misc/pagehead.php";
 
     html{
         box-sizing: border-box;
-    }    
+    }
     *, *:before, *:after{
         box-sizing: inherit;
     }
@@ -63,7 +63,7 @@ include "login/misc/pagehead.php";
 </head>
 <body>
     <h1>
-        <p style="color:#E1E1E1; text-align: center; ;">The Drive team</p>       
+        <p style="color:#E1E1E1; text-align: center; ;">The Drive team</p>
     </h1>
     <div class="content">
         <div class="row">
@@ -72,9 +72,9 @@ include "login/misc/pagehead.php";
                     <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Hunter Adams</h2>
-                        <p class="title">Front-end</p>
+                        <p class="title">HTML-slave</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>KetchupHa@gmail.com.com</p>
+                        <p>huadams.2021@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -159,4 +159,3 @@ include "login/misc/pagehead.php";
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
 </html>
-
