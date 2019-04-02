@@ -24,10 +24,10 @@ include "../login/misc/pagehead.php";
 	    text-align: center;
 	    font-size: 11px;
     }
-    .button{
+    .btn btn-primary{
       background-color: #B88A1D;
     }
-    .button:hover{
+    .btn btn-primary:hover{
       background-color: #E2B448;
     }
     html, body{
