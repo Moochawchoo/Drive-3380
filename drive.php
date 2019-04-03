@@ -7,32 +7,32 @@ include "login/misc/pagehead.php";
 <html>
 <style>
     #map{
-	top: 0%;
-	height: 100%;
+    top: 0%;
+    height: 100%;
     }
     #wrapper{
- 	left:0;
-	right: 0;
-	top: 52px;
-	bottom: 15px;
-	position: absolute;
+    left:0;
+    right: 0;
+    top: 52px;
+    bottom: 15px;
+    position: absolute;
     }
     #content{
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	overflow: auto;
-	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    position: absolute;
     }
     #footer{
-	bottom: 0;
-	right: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	font-size: 11px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
     }
 </style>
     <?php require "login/misc/pullnav.php"; ?>
@@ -44,39 +44,38 @@ include "login/misc/pagehead.php";
     <div id="wrapper">
       <div id="content">
         <div id="map">
-      		<script>
+            <script>
             var map, infoWindow;
             function initMap()
             {
-				var marker2 = {lat: 30.4110, lng: -91.1790};
-            	map = new google.maps.Map(document.getElementById('map'),
-            				  {
-            		center: {lat: 30.4133, lng: -91.1800},
-            		zoom: 14
-            	});
-            	infoWindow = new google.maps.InfoWindow;
-            	if (navigator.geolocation)
-            	{
-            	navigator.geolocation.getCurrentPosition(function(position)
-            			{
-				var pos = {
-					lat: position.coords.latitude,
-					lng: position.coords.longitude
-				}
-				addMarker(pos, map, 'This is you.');
-				addMarker(marker2, map, 'This is Sean.');
-                addMarker()
-				map.setCenter(pos);
-            			}),
-            				    function() {
-            				handleLocationError(true, infoWindow, map.getCenter());
-            			}
-            		}
-            		else
-            		{
-            		// Browser doesn't support Geolocation
-            		handleLocationError(false, infoWindow, map.getCenter());
-            		}
+                var marker2 = {lat: 30.4110, lng: -91.1790};
+                map = new google.maps.Map(document.getElementById('map'),
+                              {
+                    center: {lat: 30.4133, lng: -91.1800},
+                    zoom: 14
+                });
+                infoWindow = new google.maps.InfoWindow;
+                if (navigator.geolocation)
+                {
+                navigator.geolocation.getCurrentPosition(function(position)
+                        {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                }
+                addMarker(pos, map, 'This is you.');
+                addMarker(marker2, map, 'This is Sean.');
+                map.setCenter(pos);
+                        }),
+                                function() {
+                            handleLocationError(true, infoWindow, map.getCenter());
+                        }
+                    }
+                    else
+                    {
+                    // Browser doesn't support Geolocation
+                    handleLocationError(false, infoWindow, map.getCenter());
+                    }
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -86,27 +85,30 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-			function addMarker(pos, map, text, marker)
-			{
-
+            function addMarker(pos, map, text, marker)
+            {
                 this.marker = marker;
-				var marker = new google.maps.Marker({
-         			position: pos,
-          			map: map,
-          			title: text
-        			});
-			}
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    title: text
+                    });
+            }
         
-			marker.addEventListener("click", function(
-			{
-				if (confirm("Take this job?"))
-					alert("Job taken.");
-				else
-					txt = ("Job denied.");
-			});
+            marker.addEventListener("click", function(
+            {
+                var text = confirm("Take this job?");
+                if (text == true)
+                {
+                    alert("Job taken.");
+                    marker.setMap(null);
+                }
+                else
+                    alert("Job denied.");
+            });
           </script>
-			  </div>
-	    </div>
+              </div>
+        </div>
     </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright © 2019 Drive</header></div>
   </div>
