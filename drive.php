@@ -63,7 +63,11 @@ include "login/dbconf.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-				addMarker(pos,map);
+				var marker = new google.maps.Marker({
+         			position: pos,
+          			map: map,
+          			title: 'This is you'
+        			});
 				map.setCenter(pos);
             			}),
             				    function() {
