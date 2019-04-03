@@ -65,6 +65,7 @@ include "login/misc/pagehead.php";
 				}
 				addMarker(pos, map, 'This is you.');
 				addMarker(marker2, map, 'This is Sean.');
+                addMarker()
 				map.setCenter(pos);
             			}),
             				    function() {
@@ -87,6 +88,8 @@ include "login/misc/pagehead.php";
             }
 			function addMarker(pos, map, text)
 			{
+
+                this.marker = marker;
 				var marker = new google.maps.Marker({
          			position: pos,
           			map: map,
