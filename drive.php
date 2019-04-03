@@ -2,18 +2,19 @@
 $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
+include "login/dbconf.php";
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "login";
-
+if(isset($_COOKIE["latitude"]) && isset($_COOKIE["longitude"]))
+{
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO $tbl_member_loc (lat, lng)
-VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
+$sql = "INSERT INTO $tbl_member_loc (lat, lng)" . "VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -25,6 +26,7 @@ $resultLat = $conn->query($sql);
 $sql = "SELECT lng FROM $tbl_member_loc";
 $resultLng = $conn->query($sql);
 $conn->close();
+}
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <html>
@@ -118,7 +120,7 @@ $conn->close();
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-            function createCookie(var name, var latitude, var longitude)
+            function createCookie(var name, var coord, var days)
             {
                 if (days)
                 {
@@ -130,7 +132,7 @@ $conn->close();
                 {
                     expires = "";
                 }
-                document.cookie = userid + "=" + coord + expires + "; path=\\";
+                document.cookie = userid + "=" + coord + expires + "; path=/; domain =.https://server.1337ersprime.com/";
             }
           </script>
 			  </div>
