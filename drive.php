@@ -46,6 +46,7 @@ include "login/misc/pagehead.php";
         <div id="map">
             <script>
             var map, infoWindow;
+	    var gmarkers = [];
             function initMap()
             {
                 var marker2 = {lat: 30.4110, lng: -91.1790};
@@ -76,7 +77,6 @@ include "login/misc/pagehead.php";
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
             		}
-		    job();
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -86,25 +86,23 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-            function addMarker(pos, map, text, marker)
+            function addMarker(pos, map, text)
             {
-                this.marker = marker;
                 var marker = new google.maps.Marker({
                     position: pos,
                     map: map,
                     title: text
                     });
+		    gmarkers.push(marker);
             }
-		function job()
-		    {	
-                if (confirm("Take this job?"))
-                {
-                    alert("Job taken.");
-                    marker.setMap(null);
-                }
-                else
-                    alert("Job denied.");
-		    }
+		    function deleteMarker()
+		    {
+			   for(i=0; i<gmarkers.length; i++)
+			   {
+			   gmarkers[i].setMap(null);
+			   }
+    		    }
+		    marker.addListener('click',deleteMarker());
                  </script>
               </div>
         </div>
