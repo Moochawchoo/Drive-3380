@@ -35,11 +35,9 @@ include "login/misc/pagehead.php";
         width: 33%;
         margin-bottom: 16px;
         padding 0 8px;
-        transition: all ,3s ease-in;
+        transition: all .3s ease-in;
     }
-        .column:hover .overlay{
-            opacity: 0;
-        }
+
     @media screen and (max-width: 650px) {
         .column {
             width: 100%;
@@ -51,6 +49,9 @@ include "login/misc/pagehead.php";
         background-color: #E1E1E1;
     }
     .carde {}
+    .card:hover .containerc{
+        visibility: hidden;
+    }    
     .container {
         padding: 0 16px;
     }
@@ -83,7 +84,7 @@ include "login/misc/pagehead.php";
             </div>
             <div class="column">
                 <div class="card">
-                    <div class="container">
+                    <div class="containerc">
                         <h2>Chris Calvo</h2>
                         <p class="title">Apprentice Coder</p>
                         <p>I do things and dissapear ḭ̷͔̟̫͘͢n͍̮̰̣t̷̩̝̣͇̺̼̫͞o̥͕̹̜̬̫̠ ̨̰͍̙͍̙̺͈͈͝t̵̜̻̥̩͚͍͟͟h̖̱̙̥̝̺̕é̦̣̝͍̭̯͜ ̨͖͎͇͝ͅv̺̳o҉͎i̢̲̣͕̗̳̲͉̮͢d͖̱͍̙͠.</p>
