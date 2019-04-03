@@ -97,13 +97,13 @@ include "login/misc/pagehead.php";
         			});
 			}
         
-			marker.addEventListener("click", popUp());
-			function popUp(){
+			marker.addEventListener("click", function(
+			{
 				if (confirm("Take this job?"))
 					alert("Job taken.");
 				else
 					txt = ("Job denied.");
-			}
+			});
           </script>
 			  </div>
 	    </div>
