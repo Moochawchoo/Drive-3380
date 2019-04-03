@@ -63,17 +63,8 @@ include "login/misc/pagehead.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-
-
-                var marker = new google.maps.Marker({
-                    position: {lat: 30.4133, lng: -91.1800},
-                    map: map,
-
-				addMarker(pos,map,'this is you');
-
 				addMarker(pos, map, 'This is you.');
 				addMarker(marker2, map, 'This is Sean.');
-
 				map.setCenter(pos);
             			}),
             				    function() {
