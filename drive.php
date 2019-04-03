@@ -86,7 +86,7 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-			function addMarker(pos, map, text)
+			function addMarker(pos, map, text, marker)
 			{
 
                 this.marker = marker;
