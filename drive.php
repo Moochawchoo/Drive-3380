@@ -63,7 +63,7 @@ include "login/dbconf.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-				addMarker(pos,map,'this is you');
+				addMarker(pos,map);
 				map.setCenter(pos);
             			}),
             				    function() {
