@@ -94,8 +94,6 @@ include "login/misc/pagehead.php";
                     title: text
                     });
             }
-            marker.addEventListener("click", function()
-            {
                 var text = confirm("Take this job?");
                 if (text == true)
                 {
@@ -104,8 +102,7 @@ include "login/misc/pagehead.php";
                 }
                 else
                     alert("Job denied.");
-            });
-          </script>
+                 </script>
               </div>
         </div>
     </div>
