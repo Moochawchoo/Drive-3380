@@ -35,7 +35,11 @@ include "login/misc/pagehead.php";
         width: 33%;
         margin-bottom: 16px;
         padding 0 8px;
+        transition: all ,3s ease-in;
     }
+        .column:hover .overlay{
+            opacity: 0;
+        }
     @media screen and (max-width: 650px) {
         .column {
             width: 100%;
@@ -46,9 +50,7 @@ include "login/misc/pagehead.php";
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         background-color: #E1E1E1;
     }
-    .carde {
-
-    }
+    .carde {}
     .container {
         padding: 0 16px;
     }
@@ -70,8 +72,7 @@ include "login/misc/pagehead.php";
     <div class="content">
         <div class="row">
             <div class="column">
-                <div class="card">
-                    <img src="" alt="" style="width:100%">
+                <div class="card">                   
                     <div class="container">
                         <h2>Hunter Adams</h2>
                         <p class="title">HTML-slave</p>
@@ -82,18 +83,16 @@ include "login/misc/pagehead.php";
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Chris Calvo</h2>
                         <p class="title">Apprentice Coder</p>
-                        <p>Does things and dissapears into the void.</p>
+                        <p>I do things and dissapear ḭ̷͔̟̫͘͢n͍̮̰̣t̷̩̝̣͇̺̼̫͞o̥͕̹̜̬̫̠ ̨̰͍̙͍̙̺͈͈͝t̵̜̻̥̩͚͍͟͟h̖̱̙̥̝̺̕é̦̣̝͍̭̯͜ ̨͖͎͇͝ͅv̺̳o҉͎i̢̲̣͕̗̳̲͉̮͢d͖̱͍̙͠.</p>
                         <p>Spirit@gmail.com</p>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Leslyanne Warrington</h2>
                         <p class="title">Front-end</p>
@@ -106,7 +105,6 @@ include "login/misc/pagehead.php";
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Brandon Norman</h2>
                         <p class="title">Back-end</p>
@@ -118,18 +116,16 @@ include "login/misc/pagehead.php";
 
             <div class="column">
                 <div class="card">
-                    <img src="" alt="" style="width:100%">
                     <div class="container">
                          <h2>Philip Kerr</h2>
                         <p class="title">Back-end</p>
                         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>DReplicant@example.com</p>
+                        <p>DReplicant@yahoo.com</p>
                     </div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Sean Wilkinson</h2>
                         <p class="title">Back-end</p>
@@ -142,13 +138,11 @@ include "login/misc/pagehead.php";
         <div class="row">
             <div class="column">
                 <div class="carde">
-                    <img src="" alt="" style="width:100%">
                     <div class="container"></div>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="" alt="" style="width:100%">
                     <div class="container">
                         <h2>Robert Zhong</h2>
                         <p class="title">Almighty Server Guy</p>
