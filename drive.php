@@ -99,7 +99,8 @@ include "login/misc/pagehead.php";
         
 			marker.addEventListener("click", function(
 			{
-				if (confirm("Take this job?"))
+				var text = confirm("Take this job?");
+				if (confirm(text == true)
 				{
 					alert("Job taken.");
 					marker.setMap(null);
