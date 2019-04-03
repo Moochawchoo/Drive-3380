@@ -36,7 +36,7 @@ include "login/dbconf.php";
 	font-size: 11px;
     }
 </style>
-      <?php require "login/misc/pullnav.php"; ?>
+    
 </head>
 <body>
 <p id = "printThis"></p>
@@ -63,11 +63,7 @@ include "login/dbconf.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-				var marker = new google.maps.Marker({
-         			position: pos,
-          			map: map,
-          			title: 'This is you'
-        			});
+				addMarker(pos,map,'this is you');
 				map.setCenter(pos);
             			}),
             				    function() {
@@ -89,7 +85,7 @@ include "login/dbconf.php";
                 infoWindow.open(map);
             }
         
-			google.maps.Marker.addEventListener("click", popUp());
+			Marker.addEventListener("click", popUp());
 			function popUp(){
 				if (confirm("Take this job?"))
 					alert("Job taken.");
