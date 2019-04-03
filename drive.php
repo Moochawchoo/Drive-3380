@@ -64,8 +64,18 @@ include "login/misc/pagehead.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-				addMarker(pos, map, 'This is you.');
-				addMarker(marker2, map, 'This is Sean.');
+                		var marker = new google.maps.Marker({
+                    		position: pos,
+                    		map: map,
+                    		title: 'This is you'
+                    		});
+				gmarkers.push(marker);
+			        var marker = new google.maps.Marker({
+                    		position: pos,
+                    		map: map,
+                    		title: text
+                    		});
+		    		gmarkers.push(marker);
 				map.setCenter(pos);
             			}),
             				    function() {
@@ -77,6 +87,7 @@ include "login/misc/pagehead.php";
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
             		}
+		    marker.addListener('click',deleteMarker());
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -86,15 +97,6 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-            function addMarker(pos, map, text)
-            {
-                var marker = new google.maps.Marker({
-                    position: pos,
-                    map: map,
-                    title: text
-                    });
-		    gmarkers.push(marker);
-            }
 		    function deleteMarker()
 		    {
 			   for(i=0; i<gmarkers.length; i++)
@@ -102,7 +104,6 @@ include "login/misc/pagehead.php";
 			   gmarkers[i].setMap(null);
 			   }
     		    }
-		    marker.addListener('click',deleteMarker());
                  </script>
               </div>
         </div>
