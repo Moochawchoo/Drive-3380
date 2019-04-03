@@ -92,12 +92,11 @@ include "login/misc/pagehead.php";
   </div>
   <div class="column">
     <div class="jumbotron text-center" style="border-radius: 25px; margin-left: 14px;">
-        <p style="margin-left:25px; margin-right:25px; font-size:15px;">Drive is the ultimate resource for getting around efficiently.
-        Use our price estimator to see which rideshare service is best for your ride. Don't want to use either?
-        Use our own driver-friendly service instead. We allow our drivers to be in control and pick what rides
-        they want to take. If you're someone who commutes using a rideshare service frequently, you can also
-        schedule rides that repeat at whatever day or time you choose. No matter what you need, we'll make sure
-        you enjoy the ride.</p>
+        <p style="margin-left:25px; margin-right:25px; font-size:15px;">Drive is your way to get around efficiently.
+          Use it for a quick trip, or if you commute frequently, use you can schedule rides that repeat at whatever
+          day or time you choose. Need a quick way to make money? Join our driver team. Our service allows drivers to
+          be in control of their schedule, and pick which rides they want to take. No matter what you need, we'll make
+          sure you enjoy the ride.</p>
     </div>
   </div>
   <div class="column">
