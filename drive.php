@@ -86,20 +86,12 @@ include "login/misc/pagehead.php";
                 infoWindow.open(map);
             }
         
-			Marker.addEventListener("click", popUp());
+			marker.addEventListener("click", popUp());
 			function popUp(){
 				if (confirm("Take this job?"))
 					alert("Job taken.");
 				else
 					txt = ("Job denied.");
-			}
-			function addMarker( pos, map, text)
-			{
-				var marker = new google.maps.Marker({
-         			position: pos,
-          			map: map,
-          			title: text
-        			});
 			}
           </script>
 			  </div>
