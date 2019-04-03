@@ -87,7 +87,13 @@ include "login/misc/pagehead.php";
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
             		}
-		    marker.addListener('click',deleteMarker());
+		    marker.addListener('click',function()
+		    {
+			 for(i=0; i<gmarkers.length; i++)
+			   {
+			   gmarkers[i].setMap(null);
+			   }	       
+      	            });
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -97,13 +103,6 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-		    function deleteMarker()
-		    {
-			   for(i=0; i<gmarkers.length; i++)
-			   {
-			   gmarkers[i].setMap(null);
-			   }
-    		    }
                  </script>
               </div>
         </div>
