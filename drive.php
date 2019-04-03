@@ -56,7 +56,7 @@ include "login/misc/pagehead.php";
   <div class="container">
     <div id="wrapper">
       <div id="content">
-	<div id ="floating-panel>
+	<div id ="floating-panel">
 	 <input onclick="deleteMarkers();"type=button value="Take job?">
 	</div>
         <div id="map">
@@ -102,7 +102,7 @@ include "login/misc/pagehead.php";
             		{
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
-            		}	       
+            		}
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
