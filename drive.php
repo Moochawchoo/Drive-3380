@@ -97,8 +97,7 @@ include "login/misc/pagehead.php";
             }
 		function job()
 		    {	
-                var text = confirm("Take this job?");
-                if (text == true)
+                if (confirm("Take this job?"))
                 {
                     alert("Job taken.");
                     marker.setMap(null);
