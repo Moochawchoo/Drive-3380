@@ -81,19 +81,12 @@ include "login/misc/pagehead.php";
 </head>
 <body style>
     <div class="hero-image">
-      <div class="hero-text">
-        <h1>Let's Get on the Road</h1>
-        <p>Drive is here to help you get where you want, when you want to.</p>
-        <button onclick="window.location.href = 'https://server.1337ersprime.com/login/index.php';">Start Here</button>
-      </div>
+        <div class="hero-text">
+          <h1>Let's Get on the Road</h1>
+          <p>Drive is here to help you get where you want, when you want to.</p>
+          <button onclick="window.location.href = 'https://server.1337ersprime.com/login/index.php';">Start Here</button>
+        </div>
     </div>
-    <div class="container">
-	<div id="wrapper">
-	    <div id="content">
-	    </div>
-	</div>
-  <!-- <img src="man driving with gps.jpg" style="width:100%"> -->
     <div id="footer"><header style="color:#b3b3b3">Copyright © 2019 Drive</header></div>
-    </div>
 </body>
 </html>
