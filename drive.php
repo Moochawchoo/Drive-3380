@@ -25,6 +25,19 @@ include "login/misc/pagehead.php";
     overflow: auto;
     position: absolute;
     }
+    #floating-panel {
+     position: absolute;
+     top: 10px;
+     left: 25%;
+     z-index: 5;
+     background-color: #fff;
+     padding: 5px;
+     border: 1px solid #999;
+     text-align: center;
+     font-family: 'Roboto','sans-serif';
+     line-height: 30px;
+     padding-left: 10px;
+     }
     #footer{
     bottom: 0;
     right: 0;
@@ -43,6 +56,9 @@ include "login/misc/pagehead.php";
   <div class="container">
     <div id="wrapper">
       <div id="content">
+	<div id ="floating-panel>
+	 <input onclick="deleteMarkers();"type=button value="Take job?">
+	</div>
         <div id="map">
             <script>
             var map, infoWindow, marker;
@@ -86,14 +102,7 @@ include "login/misc/pagehead.php";
             		{
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
-            		}
-		    marker.addListener('click',function()
-		    {
-			 for(i=0; i<gmarkers.length; i++)
-			   {
-			   gmarkers[i].setMap(null);
-			   }	       
-      	            });
+            		}	       
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -103,6 +112,13 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
+		     function deleteMarkers()
+		     {
+ 			   for(i=0; i<gmarkers.length; i++)
+			   {
+			   gmarkers[i].setMap(null);
+			   }
+		     }
                  </script>
               </div>
         </div>
