@@ -63,6 +63,7 @@ $conn->close();
     <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
+<p id = "printThis"></p>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
   <div class="container">
     <div id="wrapper">
@@ -133,6 +134,13 @@ $conn->close();
                 }
                 document.cookie = userid + "=" + coord + expires + "; path=/; domain =.https://server.1337ersprime.com/";
             }
+			google.maps.Marker.addEventListener("click", popUp());
+			function popUp(){
+				if (confirm("Take this job?"))
+					alert("Job taken.");
+				else
+					txt = ("Job denied.");
+			}
           </script>
 			  </div>
 	    </div>
