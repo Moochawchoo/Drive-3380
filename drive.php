@@ -76,6 +76,7 @@ include "login/misc/pagehead.php";
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
             		}
+		    job();
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -94,6 +95,8 @@ include "login/misc/pagehead.php";
                     title: text
                     });
             }
+		function job()
+		    {	
                 var text = confirm("Take this job?");
                 if (text == true)
                 {
@@ -102,6 +105,7 @@ include "login/misc/pagehead.php";
                 }
                 else
                     alert("Job denied.");
+		    }
                  </script>
               </div>
         </div>
