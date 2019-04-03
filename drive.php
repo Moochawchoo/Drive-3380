@@ -65,7 +65,6 @@ include "login/misc/pagehead.php";
 				}
 				addMarker(pos, map, 'This is you.');
 				addMarker(marker2, map, 'This is Sean.');
-                addMarker()
 				map.setCenter(pos);
             			}),
             				    function() {
@@ -100,7 +99,7 @@ include "login/misc/pagehead.php";
 			marker.addEventListener("click", function(
 			{
 				var text = confirm("Take this job?");
-				if (confirm(text == true)
+				if (text == true)
 				{
 					alert("Job taken.");
 					marker.setMap(null);
