@@ -49,6 +49,7 @@ include "login/dbconf.php";
             var map, infoWindow;
             function initMap()
             {
+				var marker2 = {lat: 30.4110, lng: -91.1790};
             	map = new google.maps.Map(document.getElementById('map'),
             				  {
             		center: {lat: 30.4133, lng: -91.1800},
@@ -63,7 +64,8 @@ include "login/dbconf.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-				addMarker(pos,map,'this is you');
+				addMarker(pos, map, 'This is you.');
+				addMarker(marker2, map, 'This is Sean.');
 				map.setCenter(pos);
             			}),
             				    function() {
