@@ -48,39 +48,9 @@ include "login/misc/pagehead.php";
             var map, infoWindow;
             function initMap()
             {
-<<<<<<< HEAD
                 var marker2 = {lat: 30.4110, lng: -91.1790};
-                map = new google.maps.Map(document.getElementById('map'),
-                              {
-                    center: {lat: 30.4133, lng: -91.1800},
-                    zoom: 14
-                });
-                infoWindow = new google.maps.InfoWindow;
-                if (navigator.geolocation)
-                {
-                navigator.geolocation.getCurrentPosition(function(position)
-                        {
-                var pos = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                }
-                addMarker(pos, map, 'This is you.');
-                addMarker(marker2, map, 'This is Sean.');
-                map.setCenter(pos);
-                        }),
-                                function() {
-                            handleLocationError(true, infoWindow, map.getCenter());
-                        }
-                    }
-                    else
-                    {
-                    // Browser doesn't support Geolocation
-                    handleLocationError(false, infoWindow, map.getCenter());
-                    }
-=======
-				var marker2 = {lat: 30.4110, lng: -91.1790};
             	map = new google.maps.Map(document.getElementById('map'),
-            				  {
+            	{
             		center: {lat: 30.4133, lng: -91.1800},
             		zoom: 14
             	});
@@ -106,7 +76,6 @@ include "login/misc/pagehead.php";
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
             		}
->>>>>>> 814686c41c84b9c89d3c5c46a9a70071788209e4
             }
             function handleLocationError(browserHasGeolocation, infoWindow, pos)
             {
@@ -125,9 +94,7 @@ include "login/misc/pagehead.php";
                     title: text
                     });
             }
-        
-<<<<<<< HEAD
-            marker.addEventListener("click", function(
+            marker.addEventListener("click", function()
             {
                 var text = confirm("Take this job?");
                 if (text == true)
@@ -138,19 +105,6 @@ include "login/misc/pagehead.php";
                 else
                     alert("Job denied.");
             });
-=======
-			marker.addEventListener("click", function(
-			{
-				var text = confirm("Take this job?");
-				if (text == true)
-				{
-					alert("Job taken.");
-					marker.setMap(null);
-				}
-				else
-					alert("Job denied.");
-			});
->>>>>>> 814686c41c84b9c89d3c5c46a9a70071788209e4
           </script>
               </div>
         </div>
