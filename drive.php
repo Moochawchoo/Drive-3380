@@ -24,7 +24,7 @@ $sql = "SELECT lat FROM $tbl_member_loc";
 $resultLat = $conn->query($sql);
 $sql = "SELECT lng FROM $tbl_member_loc";
 $resultLng = $conn->query($sql);
-
+$conn->close();
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <html>
