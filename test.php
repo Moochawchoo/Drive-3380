@@ -80,18 +80,16 @@ include "login/misc/pagehead.php";
     <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
     <div class="hero-image">
       <div class="hero-text">
         <h1>Let's Get on the Road</h1>
         <p>Drive is here to help you get where you want, when you want to.</p>
-        <button>Start Here</button>
+        <button onclick="window.location.href = 'https://server.1337ersprime.com/login/index.php';">Start Here</button>
       </div>
     </div>
     <div class="container">
 	<div id="wrapper">
 	    <div id="content">
-		<!-- <div id="map"></div> -->
 	    </div>
 	</div>
   <!-- <img src="man driving with gps.jpg" style="width:100%"> -->
