@@ -63,17 +63,17 @@ include "login/misc/pagehead.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-<<<<<<< HEAD
+
 
                 var marker = new google.maps.Marker({
                     position: {lat: 30.4133, lng: -91.1800},
                     map: map,
 
 				addMarker(pos,map,'this is you');
-=======
+
 				addMarker(pos, map, 'This is you.');
 				addMarker(marker2, map, 'This is Sean.');
->>>>>>> a8a2a65f11c032f22c2dbce6cdda2e3e2bb3c808
+
 				map.setCenter(pos);
             			}),
             				    function() {
@@ -101,6 +101,14 @@ include "login/misc/pagehead.php";
 					alert("Job taken.");
 				else
 					txt = ("Job denied.");
+			}
+			function addMarker(var pos, var map, var text)
+			{
+				var marker = new google.maps.Marker({
+         			position: pos,
+          			map: map,
+          			title: text
+        			});
 			}
           </script>
 			  </div>
