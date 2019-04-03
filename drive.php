@@ -7,7 +7,8 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "login";
-
+if(isset($_COOKIE["latitude"]) && isset($_COOKIE["longitude"]))
+{
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -25,6 +26,7 @@ $resultLat = $conn->query($sql);
 $sql = "SELECT lng FROM $tbl_member_loc";
 $resultLng = $conn->query($sql);
 $conn->close();
+}
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <html>
