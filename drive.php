@@ -119,7 +119,7 @@ $conn->close();
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-            function createCookie(var name, var latitude, var longitude)
+            function createCookie(var name, var coord, var days)
             {
                 if (days)
                 {
@@ -131,7 +131,7 @@ $conn->close();
                 {
                     expires = "";
                 }
-                document.cookie = userid + "=" + coord + expires + "; path=/; domain = https://server.1337ersprime.com/";
+                document.cookie = userid + "=" + coord + expires + "; path=/; domain =.https://server.1337ersprime.com/";
             }
           </script>
 			  </div>
