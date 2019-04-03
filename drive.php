@@ -45,7 +45,7 @@ include "login/misc/pagehead.php";
       <div id="content">
         <div id="map">
             <script>
-            var map, infoWindow;
+            var map, infoWindow, marker;
 	    var gmarkers = [];
             function initMap()
             {
@@ -64,16 +64,16 @@ include "login/misc/pagehead.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
-                		var marker = new google.maps.Marker({
+                		marker = new google.maps.Marker({
                     		position: pos,
                     		map: map,
                     		title: 'This is you'
                     		});
 				gmarkers.push(marker);
-			        var marker = new google.maps.Marker({
-                    		position: pos,
+			        marker = new google.maps.Marker({
+                    		position: marker2,
                     		map: map,
-                    		title: text
+                    		title: 'This is Sean'
                     		});
 		    		gmarkers.push(marker);
 				map.setCenter(pos);
