@@ -9,6 +9,7 @@ include "login/misc/pagehead.php";
     #map{
     top: 0%;
     height: 100%;
+    z-index: 4;
     }
     #wrapper{
     left:0;
