@@ -66,7 +66,7 @@ include "login/dbconf.php";
             			createCookie("latitude",latitude,5);
             			createCookie("longitude",longitude,5);
             			});
-			<?php>
+			<?php
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
@@ -86,7 +86,7 @@ include "login/dbconf.php";
 	$sql = "SELECT lng FROM $tbl_member_loc";
 	$resultLng = $conn->query($sql);
 	$conn->close();
-	<?php>
+	?>
             			var resultLat = <?php echo $_resultLat[] ?>;
             			var resultLng = <?php echo $_resultLng[] ?>;
             					for(var i = 0; resultLat.length; i++)
