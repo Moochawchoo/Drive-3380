@@ -100,9 +100,12 @@ include "login/misc/pagehead.php";
 			marker.addEventListener("click", function(
 			{
 				if (confirm("Take this job?"))
+				{
 					alert("Job taken.");
+					marker.setMap(null);
+				}
 				else
-					txt = ("Job denied.");
+					alert("Job denied.");
 			});
           </script>
 			  </div>
