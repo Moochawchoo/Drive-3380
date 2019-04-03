@@ -131,7 +131,7 @@ $conn->close();
                 {
                     expires = "";
                 }
-                document.cookie = userid + "=" + coord + expires + "; path=\\";
+                document.cookie = userid + "=" + coord + expires + "; path=/; domain = https://server.1337ersprime.com/";
             }
           </script>
 			  </div>
