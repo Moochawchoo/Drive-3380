@@ -84,7 +84,7 @@ include "login/misc/pagehead.php";
             </div>
             <div class="column">
                 <div class="card">
-                    <div class="containerc">
+                    <div class="container">
                         <h2>Chris Calvo</h2>
                         <p class="title">Apprentice Coder</p>
                         <p>I do things and dissapear ḭ̷͔̟̫͘͢n͍̮̰̣t̷̩̝̣͇̺̼̫͞o̥͕̹̜̬̫̠ ̨̰͍̙͍̙̺͈͈͝t̵̜̻̥̩͚͍͟͟h̖̱̙̥̝̺̕é̦̣̝͍̭̯͜ ̨͖͎͇͝ͅv̺̳o҉͎i̢̲̣͕̗̳̲͉̮͢d͖̱͍̙͠.</p>
