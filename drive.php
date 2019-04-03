@@ -82,8 +82,10 @@ $conn->close();
             			{
             			$(document).ready(function()
             			{
-            			createCookie("latitude",position.coords.latitude,5);
-            			createCookie("longitude",position.coords.longitude,5);
+                            var latitude = position.coords.latitude;
+                            var longitude = position.coords.longitude;
+            			createCookie("latitude",latitude,5);
+            			createCookie("longitude",longitude,5);
             			});
             			var resultLat = <?php echo $_resultLat[] ?>;
             			var resultLng = <?php echo $_resultLng[] ?>;
@@ -115,7 +117,7 @@ $conn->close();
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-            function createCookie(var name, var coord, var days)
+            function createCookie(var name, var latitude, var longitude)
             {
                 if (days)
                 {
