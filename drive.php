@@ -85,6 +85,14 @@ include "login/misc/pagehead.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
+			function addMarker(pos, map, text)
+			{
+				var marker = new google.maps.Marker({
+         			position: pos,
+          			map: map,
+          			title: text
+        			});
+			}
         
 			marker.addEventListener("click", popUp());
 			function popUp(){
