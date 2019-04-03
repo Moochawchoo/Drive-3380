@@ -36,7 +36,7 @@ include "login/dbconf.php";
 	font-size: 11px;
     }
 </style>
-    <?php require "login/misc/pullnav.php"; ?>
+    
 </head>
 <body>
 <p id = "printThis"></p>
@@ -59,46 +59,6 @@ include "login/dbconf.php";
             	{
             	navigator.geolocation.getCurrentPosition(function(position)
             			{
-                            var latitude = position.coords.latitude;
-                            var longitude = position.coords.longitude;
-
-            			$(document).ready(function()
-            			{
-            			createCookie("latitude",latitude,5);
-            			createCookie("longitude",longitude,5);
-            			});
-			<?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "login";
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	if ($conn->connect_error) {
-    	die("Connection failed: " . $conn->connect_error);
-	} 
-	$sql = "INSERT INTO $tbl_member_loc (lat, lng)" . "VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
-	if ($conn->query($sql) === TRUE) {
-    	echo "New record created successfully";
-	} else {
-    	echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-	$sql = "SELECT lat FROM $tbl_member_loc";
-	$resultLat = $conn->query($sql);
-	$sql = "SELECT lng FROM $tbl_member_loc";
-	$resultLng = $conn->query($sql);
-	$conn->close();
-	?>
-            			var resultLat = <?php echo $_resultLat[] ?>;
-            			var resultLng = <?php echo $_resultLng[] ?>;
-            					for(var i = 0; resultLat.length; i++)
-            					{
-            						var pos =
-            						{
-            							lat: resultLat[i],
-            							lng: resultLng[i]
-            						};
-            						addMarker(pos,map);
-            					}
             			}),
             				    function() {
             				handleLocationError(true, infoWindow, map.getCenter());
@@ -118,20 +78,7 @@ include "login/dbconf.php";
                     'Error: Your browser doesn\'t support geolocation.');
                 infoWindow.open(map);
             }
-            function createCookie(var name, var coord, var days)
-            {
-                if (days)
-                {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toGMTString();
-                }
-                else
-                {
-                    expires = "";
-                }
-                document.cookie = userid + "=" + coord + expires + "; path=/; domain =.https://server.1337ersprime.com/";
-            }
+        
 			google.maps.Marker.addEventListener("click", popUp());
 			function popUp(){
 				if (confirm("Take this job?"))
