@@ -36,7 +36,7 @@ include "login/dbconf.php";
 	font-size: 11px;
     }
 </style>
-    
+      <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
 <p id = "printThis"></p>
