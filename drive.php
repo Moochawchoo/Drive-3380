@@ -93,7 +93,7 @@ include "login/misc/pagehead.php";
 				else
 					txt = ("Job denied.");
 			}
-			function addMarker(var pos, var map, var text)
+			function addMarker( pos, map, text)
 			{
 				var marker = new google.maps.Marker({
          			position: pos,
