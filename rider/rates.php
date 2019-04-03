@@ -28,6 +28,7 @@ include "../login/misc/pagehead.php";
     <?php require "../login/misc/pullnav.php"; ?>
 </head>
 <body>
+    
     <h1>
         <p style="color:#E1E1E1; text-align: center; ;">Drive Rates</p>
     </h1>
@@ -35,46 +36,48 @@ include "../login/misc/pagehead.php";
         <h3>
            <strong> We offer different pricing depending on the number of riders: </strong>
         </h3>
+        <div id="background">
         <p>
-        <h9>
+        <h3>
             <strong>DriveScout:</strong><br />
-        </h9>
+        </h3>
         <font size = "3.5">
             Seats up to two people<br />
             Base Fare: $1.25<br />
             Per Minute: $0.15<br />
-            Per Mile: $0.90<br />
+            Per Mile: $0.50<br />
             Cancellation Fee: $5<br />
             Service Fee: $1.75
         </font>
         </p>
         <p>
-        <h9>
+        <h3>
             <strong>DriveSquad:</strong><br />
-        </h9>
+        </h3>
         <font size = "3.5">
             Seats up to four people<br />
             Base Fare: $2<br />
             Per Minute: $0.25<br />
-            Per Mile: $1.35<br />
+            Per Mile: $1<br />
             Cancellation Fee: $5<br />
             Service Fee: $1.75
         </font>
         </p>
         <p>
-        <h9>
+        <h3>
             <strong>DriveParty:</strong><br />
-        </h9>
+        </h3>
         <font size = "3.5">
             Seats up to eight people<br />
             Base Fare: $2.50<br />
             Per Min: $0.30<br />
-            Per Mile: $1.80<br />
-            Cancellation Fee: $10<br />
+            Per Mile: $1.50<br />
+            Cancellation Fee: $5<br />
             Service Fee: $1.75
         </font>
         </p>
     </div>
+</div>
     <div id="footer"><header style="color:#b3b3b3">Copyright &#169 2019 Drive</header></div>
 </body>
 </html>
