@@ -6,25 +6,25 @@ include "login/misc/pagehead.php";
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <html>
 <style>
-    #map{
+    #map {
     top: 0%;
     height: 100%;
-    position: absolute;
+    position: relative;
     z-index: 4;
     }
-    #wrapper{
+    #wrapper {
     left:0;
     right: 0;
     top: 52px;
     bottom: 15px;
     position: absolute;
     }
-    #content{
+    #content {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
+    overflow: visible;
     position: absolute;
     }
     #floating-panel {
