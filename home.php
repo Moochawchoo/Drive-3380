@@ -39,7 +39,7 @@ include "login/misc/pagehead.php";
     body, html {
       height: 100%;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Roboto', 'sans-serif';
     }
 
     .hero-image {
