@@ -30,15 +30,11 @@ include "login/misc/pagehead.php";
     #floating-panel {
      position: absolute;
      top: 10px;
-     left: 25%;
+     left: 190px;
      z-index: 5;
      background-color: #fff;
-     padding: 5px;
-     border: 1px solid #999;
      text-align: center;
      font-family: 'Roboto','sans-serif';
-     line-height: 30px;
-     padding-left: 10px;
      }
     #footer{
     bottom: 0;
@@ -59,7 +55,7 @@ include "login/misc/pagehead.php";
     <div id="wrapper">
       <div id="content">
 	<div id ="floating-panel">
-	 <input onclick="deleteMarkers();"type=button value="Take job?">
+	 <input onclick="deleteMarkers();" style="height:40px; width:90px;" type="button" value="Take job?">
 	</div>
         <div id="map">
             <script>
