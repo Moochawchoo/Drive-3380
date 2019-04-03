@@ -59,6 +59,12 @@ include "login/dbconf.php";
             	{
             	navigator.geolocation.getCurrentPosition(function(position)
             			{
+				var pos = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				}
+				addMarker(pos,map,'this is you');
+				map.setCenter(pos);
             			}),
             				    function() {
             				handleLocationError(true, infoWindow, map.getCenter());
