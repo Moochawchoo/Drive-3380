@@ -63,7 +63,7 @@ include "login/misc/pagehead.php";
 </style>
     <?php require "login/misc/pullnav.php"; ?>
 </head>
-<body>
+<body style="overflow-x: hidden;"> 
     <h1>
         <p style="color:#E1E1E1; text-align: center; ;">The Drive team</p>
     </h1>
