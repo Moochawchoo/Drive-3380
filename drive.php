@@ -80,10 +80,11 @@ $conn->close();
             	{
             	navigator.geolocation.getCurrentPosition(function(position)
             			{
-            			$(document).ready(function()
-            			{
                             var latitude = position.coords.latitude;
                             var longitude = position.coords.longitude;
+
+            			$(document).ready(function()
+            			{
             			createCookie("latitude",latitude,5);
             			createCookie("longitude",longitude,5);
             			});
