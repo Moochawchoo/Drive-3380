@@ -2,6 +2,7 @@
 $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
+include "login/dbconf.php";
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -12,8 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO $tbl_member_loc (lat, lng)
-VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
+$sql = "INSERT INTO $tbl_member_loc (lat, lng)" . "VALUES ( $_COOKIE["latitude"],$_COOKIE["longitude"] )";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
