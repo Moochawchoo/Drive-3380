@@ -2,7 +2,6 @@
 $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
-include "login/dbconf.php";
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <html>
@@ -36,7 +35,7 @@ include "login/dbconf.php";
 	font-size: 11px;
     }
 </style>
-    
+    <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
 <p id = "printThis"></p>
