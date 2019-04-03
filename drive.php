@@ -2,7 +2,6 @@
 $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
-include "login/dbconf.php";
 ?>
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <html>
@@ -36,7 +35,7 @@ include "login/dbconf.php";
 	font-size: 11px;
     }
 </style>
-    
+    <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
 <p id = "printThis"></p>
@@ -49,6 +48,7 @@ include "login/dbconf.php";
             var map, infoWindow;
             function initMap()
             {
+				var marker2 = {lat: 30.4110, lng: -91.1790};
             	map = new google.maps.Map(document.getElementById('map'),
             				  {
             		center: {lat: 30.4133, lng: -91.1800},
@@ -63,7 +63,17 @@ include "login/dbconf.php";
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				}
+<<<<<<< HEAD
+
+                var marker = new google.maps.Marker({
+                    position: {lat: 30.4133, lng: -91.1800},
+                    map: map,
+
 				addMarker(pos,map,'this is you');
+=======
+				addMarker(pos, map, 'This is you.');
+				addMarker(marker2, map, 'This is Sean.');
+>>>>>>> a8a2a65f11c032f22c2dbce6cdda2e3e2bb3c808
 				map.setCenter(pos);
             			}),
             				    function() {
