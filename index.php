@@ -105,8 +105,23 @@ include "login/misc/pagehead.php";
             function initMap() {
                     map = new google.maps.Map(document.getElementById("mapper"),
                         {
+                          if (navigator.geolocation)
+                        	{
+                          	navigator.geolocation.getCurrentPosition(function(position)
+                          	{
+                			            var pos =
+                                  {
+                				              lat: position.coords.latitude,
+                				              lng: position.coords.longitude
+                                  }
+                			            map.setCenter(pos);
+                          	}),
+                          }
+                          else
+                          {
                             center: {lat: 30.4133, lng: -91.1800},
-                            zoom: 14
+                          }
+                          zoom: 14
                         });
                     }
           </script>
