@@ -49,78 +49,82 @@ include "login/misc/pagehead.php";
     <?php require "login/misc/pullnav.php"; ?>
 </head>
 <body>
-<p id = "printThis"></p>
+  <p id = "printThis"></p>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBozvdVUpK_GgbLa6t5pGa6MEyWDJtsPm0&callback=initMap" async defer></script>
   <div class="container">
     <div id="wrapper">
       <div id="content">
-	<div id ="floating-panel">
-	 <input onclick="deleteMarkers();" style="height:40px; width:90px;" type="button" value="Take job?">
-	</div>
-        <div id="map">
+	       <div id ="floating-panel">
+	          <input onclick="deleteMarkers();" style="height:40px; width:90px;" type="button" value="Take job?">
+	       </div>
+         <div id="map">
             <script>
-            var map, infoWindow, marker;
-	    var gmarkers = [];
-            function initMap()
-            {
-                var marker2 = {lat: 30.4110, lng: -91.1790};
-            	map = new google.maps.Map(document.getElementById('map'),
-            	{
-            		center: {lat: 30.4133, lng: -91.1800},
-            		zoom: 14
-            	});
-            	infoWindow = new google.maps.InfoWindow;
-            	if (navigator.geolocation)
-            	{
-            	navigator.geolocation.getCurrentPosition(function(position)
-            			{
-				var pos = {
-					lat: position.coords.latitude,
-					lng: position.coords.longitude
-				}
-                		marker = new google.maps.Marker({
-                    		position: pos,
-                    		map: map,
-                    		title: 'This is you'
-                    		});
-				gmarkers.push(marker);
-			        marker = new google.maps.Marker({
-                    		position: marker2,
-                    		map: map,
-                    		title: 'This is Sean'
-                    		});
-		    		gmarkers.push(marker);
-				map.setCenter(pos);
-            			}),
-            				    function() {
-            				handleLocationError(true, infoWindow, map.getCenter());
-            			}
-            		}
+              var map, infoWindow, marker;
+  	          var gmarkers = [];
+              function initMap()
+              {
+                  var marker2 = {lat: 30.4110, lng: -91.1790};
+              	map = new google.maps.Map(document.getElementById('map'),
+              	{
+              		center: {lat: 30.4133, lng: -91.1800},
+              		zoom: 14
+              	});
+              	infoWindow = new google.maps.InfoWindow;
+              	if (navigator.geolocation)
+              	{
+                	navigator.geolocation.getCurrentPosition(function(position)
+                	{
+      			            var pos =
+                        {
+      				              lat: position.coords.latitude,
+      				              lng: position.coords.longitude
+                        }
+                    		marker = new google.maps.Marker(
+                        {
+                        		position: pos,
+                        		map: map,
+                        		title: 'This is you'
+                        });
+      			            gmarkers.push(marker);
+      		              marker = new google.maps.Marker(
+                        {
+                        		position: marker2,
+                        		map: map,
+                        		title: 'This is Sean'
+                        });
+      	    		        gmarkers.push(marker);
+      			            map.setCenter(pos);
+                	}),
+              	  function()
+                  {
+              				  handleLocationError(true, infoWindow, map.getCenter());
+              	  }
+              	}
             		else
             		{
             		// Browser doesn't support Geolocation
             		handleLocationError(false, infoWindow, map.getCenter());
             		}
-            }
-            function handleLocationError(browserHasGeolocation, infoWindow, pos)
-            {
-                infoWindow.setPosition(pos);
-                infoWindow.setContent(browserHasGeolocation ?
-                    'Error: The Geolocation service failed.' :
-                    'Error: Your browser doesn\'t support geolocation.');
-                infoWindow.open(map);
-            }
-		     function deleteMarkers()
-		     {
- 			   for(i=0; i<gmarkers.length; i++)
-			   {
-			   gmarkers[i].setMap(null);
-			   }
-		     }
-                 </script>
-              </div>
+              }
+              function handleLocationError(browserHasGeolocation, infoWindow, pos)
+              {
+                  infoWindow.setPosition(pos);
+                  infoWindow.setContent(browserHasGeolocation ?
+                      'Error: The Geolocation service failed.' :
+                      'Error: Your browser doesn\'t support geolocation.');
+                  infoWindow.open(map);
+              }
+    		      function deleteMarkers()
+    		      {
+       			    for(i=0; i<gmarkers.length; i++)
+      			    {
+      			         gmarkers[i].setMap(null);
+      			    }
+    		      }
+            </script>
+          </div>
         </div>
-    </div>
+      </div>
     <div id="footer"><header style="color:#b3b3b3">Copyright © 2019 Drive</header></div>
   </div>
 </body>
