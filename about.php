@@ -98,7 +98,7 @@ include "login/misc/pagehead.php";
                         <h2>Leslyanne Warrington</h2>
                         <p class="title">Front-end</p>
                         <p>They always say "Yee-Haw" but they never say "Haw-Yee"</p>
-                        <p>leslyannew@gmail.com</p>
+                        <p>leslyannew27@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -109,8 +109,8 @@ include "login/misc/pagehead.php";
                     <div class="container">
                         <h2>Brandon Norman</h2>
                         <p class="title">Back-end</p>
-                        <p>I dont know</p>
-                        <p>Branduhn@gmail.com</p>
+                        <p>Yo no sé hombre</p>
+                        <p>b.norman12397@gmail.com</p>
                     </div>
                 </div>
             </div>
