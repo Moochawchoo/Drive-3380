@@ -114,7 +114,7 @@ function initMap()
 	}
 	else
 	{
-	location.href="../drive.php?lat="+userlat+"&lng="+userlng;
+	location.href="drive.php?lat="+userlat+"&lng="+userlng;
 	}
 }
 
