@@ -2,7 +2,7 @@
 $title="Drive";
 $userrole="DriverRider";
 include "login/misc/pagehead.php";
-if(isset($_GET['lat']) && isset($_GET['lng'])}
+if(isset($_GET['lat']) != null && isset($_GET['lng']) != null}
 {
 $servername = "localhost";
 $username = "username";
@@ -98,7 +98,7 @@ function initMap()
 	// Browser doesn't support Geolocation
 	handleLocationError(false, infoWindow, map.getCenter());
 	}
-	if(<?php echo isset($_GET['lat'])?>)
+	if(<?php echo isset($_GET['lat'])?> != null)
 	{
 	var poslat = <?php echo '["' . implode('", "', $resultLat) . '"]' ?>;
 	var poslng = <?php echo '["' . implode('", "', $resultLng) . '"]' ?>;
