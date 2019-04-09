@@ -120,7 +120,7 @@ include "login/misc/pagehead.php";
                     <div class="container">
                          <h2>Philip Kerr</h2>
                         <p class="title">Back-end</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>Does stuf...sometimes</p>
                         <p>DReplicant@yahoo.com</p>
                     </div>
                 </div>
