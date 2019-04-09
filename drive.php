@@ -8,20 +8,12 @@ $servername = "localhost";
 $username = "username";
 $password = "password";
 $dbname = "myDB";
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
-$sql = "INSERT INTO member_loc (lat, lng)
-VALUES ( $_GET['lat'],$_GET['lng'] )";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+$sql = "INSERT INTO member_loc (lat, lng) VALUES ( $_GET['lat'],$_GET['lng'] )";
+$conn->exec($sql);
 $sql = "SELECT lat FROM member_loc";
 $resultLat = $conn->query($sql);
 $sql = "SELECT lng FROM member_loc";
