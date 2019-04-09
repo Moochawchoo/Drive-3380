@@ -12,7 +12,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$sql = "INSERT INTO member_loc (lat, lng) VALUES ( $_GET['lat'],$_GET['lng'] )";
+$lat = $_GET['lat'];
+$lng = $_GET['lng'];
+$sql = "INSERT INTO member_loc (lat, lng) VALUES ( $lat,$lng)";
 $conn->exec($sql);
 $sql = "SELECT lat FROM member_loc";
 $resultLat = $conn->query($sql);
